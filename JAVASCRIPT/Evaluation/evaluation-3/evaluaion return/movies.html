@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    
+      <style>
+
+        #movies{
+
+          display: grid;
+          grid-template-columns: repeat(3,1fr);
+          grid-template-rows: auto;
+          gap: 20px;
+          margin: auto;
+
+
+        }
+
+
+    </style>
+    
+  </head>
+  <body>
+    <button><a href="./checkout.html">Next</a> </button>
+
+    <div id="navbar">
+      <h1>Movie List</h1>
+      <h1 id="wallet"></h1>
+      <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+    </div>
+    <div id="search_bar">
+      <!-- input box for searching movies with id as "search" -->
+      <input type="text" placeholder="movie name" id="query" oninput="debounce(main,1000)">
+      <!-- No button should be there for searching movies, it should search with input  -->
+    </div>
+
+    <div id="movies">
+      <!-- Append all searched movies here in grid format -->
+      <!-- Every movie card should have image, title and a book now button  -->
+      <!-- Book now buttons should have class "book_now"  -->
+    </div>
+  </body>
+</html>
+<script src="./scripts/movies.js"></script>

@@ -1,0 +1,25 @@
+#navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: blueviolet;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #user-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width: 40%;
+    padding: 20px;
+  }

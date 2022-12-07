@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      
+      #navbar{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: end;
+        align-items: center;
+
+      }
+      #navbar>div:nth-child(4){
+        margin-bottom:10px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        font-size:32px;
+      }
+
+      #menu{
+        display: grid;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        margin: auto;
+      }
+    
+      img{
+        width:200px;
+        height:200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+
+      <div>
+
+        <h2>login</h2>
+      </div>
+      <div>
+        <h2>sign-up</h2>
+
+      </div>
+      <div>
+        <h2>iteam</h2>
+
+      </div>
+      <div>
+        <h1><a href="./bucket.html"> bucket</a></h1>
+      </div>
+      <!--Add navbar divs here-->
+      <!-- Link to bucket.html -->
+      <div id="coffee_count">
+       0
+        <!--Show total number of coffee added to bucket here, do not add anything only Total count. Not even "Count - 5" but  only number like this "5" -->
+      </div>
+    </div>
+
+    <div id="menu">
+      <!--Show coffee list here in grid format-->
+      <!-- add an add to bucket button to each item, give it HTML id as 'add_to_bucket' -->
+    </div>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>

@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "full stack developer",
+      "author": "mehfooz khan"
+    },
+    {
+      "id": "2",
+      "title": "ravi",
+      "author": "MERN Developer"
+    },
+    {
+      "id": "3",
+      "title": "ashish",
+      "author": "java developer"
+    },
+    {
+      "id": "4",
+      "title": "avanger",
+      "author": "marvel"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

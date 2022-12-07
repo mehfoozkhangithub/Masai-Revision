@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input{
+        padding: 10px;
+        width: 60%;
+      }
+      a{
+        text-decoration: none;
+        color: rgb(22, 12, 12);
+      }
+      #navbar{
+        /* border: 1px solid red; */
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+      #sorting{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 10px; */
+        /* border: 1px solid green; */
+        padding: 20px;
+      }
+      #container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:auto;
+        gap:20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Hotel App</h2>
+      <input oninput="main()" type="text" placeholder="Enter city name" id="query"> 
+      <h3><a href="login.html">login</a> </h3>
+      <h3><a href="signup.html"> Signup</a></h3>
+      <!-- <a href="">Login</a>
+      <a href="">Signup</a> -->
+      <!-- the search-box id:- "query"
+ - the log-in and sign-up link will have ids:- "login" and "signup" -->
+    </div>
+    <div id="sorting">
+      <!-- sort by price low to high Id:- "sort_lth"
+ - sort by price high to low Id:- "sort_htl"
+ - Filter Ac hotels Id:- "filter_ac"
+ - Filter Non Ac hotels Id:- "filter_nonac" -->
+          <button id="sort_lth">price low to high</button>
+          <button id="sort_htl">price high to low</button>
+          <button id="filter_ac">Ac</button>
+          <button id="filter_nonac">Non Ac</button>
+    </div>
+    <div>
+      <!-- - Append all fetched hotels inside div with id:- "hotels_list"
+ - Every hotel card will have id:-  "hotel"
+ - The book now button will have class as "book" -->
+
+        <div id="container"></div>
+
+    </div>
+  </body>
+</html>
+<script src="index.js"></script>

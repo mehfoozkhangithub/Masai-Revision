@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <style>
+      #navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <button><a href="./movies.html">Back</a> </button>
+    <div id="navbar">
+      <h1>Checkout | Cost: 100/seat</h1>
+      <h1 id="wallet"></h1>
+      <!-- Display the wallet amount here inside h1 tag with id as "wallet". Note only amount, no extra text. Like 500 not Rs 500 -->
+    </div>
+    <div id="user-detail">
+      <!-- input field to accept user name with id as "user_name"  -->
+      <input type="text" placeholder="Enetr Name" id="name">
+      <!-- input field to accept number of seats with id as "number_of_seats"  -->
+      <input type="number" placeholder="Enter number" id="num">
+      <!-- A submit button to confirm booking with id as "confirm"  -->
+      <button id="confirm" onclick="con()">confirm</button>
+    </div>
+
+    <div id="movie">
+      <!-- Append the selected movie for booking here -->
+      <!-- movie should have title and image  -->
+      <!-- It should be the same movie you selected for booking  -->
+    </div>
+  </body>
+</html>
+<script src="./scripts/checkout.js"></script>

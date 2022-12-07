@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World News</title>
+    <style>
+        #navbar
+    {
+      width: 100%;
+      display: flex;
+      height: 70px;
+      border: 1px solid red;
+      
+    }
+    #navbar button
+    {
+      margin-left: 50px;
+      padding: 10px 20px 10px 20px;
+    }
+    #news_result
+    {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+    #news_result div
+    {
+     width:330px;
+     height: 500px;
+
+    }
+    #news_result img{
+      width: 330px;
+      height: 400px;
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- - The nav-bar will have following :- 
+     * search box with Id as- "search"
+     * Link for different country news with IDs as:-
+       - India :- “in”
+       - Usa :- “us”
+       - China :- “ch”
+       - UK :- “uk”
+       - New Zealand :- “nz” -->
+       <form action="">
+        <input type="text" placeholder="search news..." id="search_box">
+      </form>
+       <button id="in" onclick="india()">India</button>
+ <button id="us" onclick="usa()">Usa</button>
+ <button id="ch"onclick="china()">China</button>
+ <button id="uk" onclick="uk()">Uk</button>
+ <button id="nz" onclick="newz()">New Zeland</button>
+    </div>
+    <div id="sidebar">
+      <!-- Sidebar will have
+         - Image of user (Id:- "image")
+         - Name of user (Id:- "name")
+        - Email of user (Id:- "email")
+         - Country of user (Id:- "country) -->
+    </div>
+    <div id="news_result">
+      <!-- - All the news will be appended inside div with id as "news_container".
+      - Every news card will have class as "news" (Show image, title and author only in cards). -->
+    </div>
+  </body>
+</html>
+<script src="./scripts/worldNews.js"></script>
+
+ 
