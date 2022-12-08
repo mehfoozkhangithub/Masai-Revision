@@ -101,10 +101,9 @@
 
   </table>
 </div>
-
-![](https://buggyprogrammer.com/wp-content/uploads/elementor/thumbs/Javascript-cheatsheet-ilovecoding-p7cccwz9fnx0gta2y3pxuc9vvrvsdjhtvbb5sd49ls.png)
-
-
+<div align="center">
+<img  src="https://buggyprogrammer.com/wp-content/uploads/elementor/thumbs/Javascript-cheatsheet-ilovecoding-p7cccwz9fnx0gta2y3pxuc9vvrvsdjhtvbb5sd49ls.png" alt="img">
+</div>
 
 ## differences between `undefined` Vs `null`
 ```js
