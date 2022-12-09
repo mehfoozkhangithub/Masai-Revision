@@ -34,7 +34,7 @@ DSA || MAC || CODING
 - Linkedin: [Ashish Bajaj](https://www.linkedin.com/in/ashish-bajaj-7299a3235/)
 - Email: (abajaj655@gmail.com)
 
-# 🧒🏻 **Neerah Kumar**
+# 🧒🏻 **Neeraj Kumar**
 
 - Github:[@Bhupendra](https://github.com/bkcjanta)
 - Linkedin:[Bhupendra](https://www.linkedin.com/mwlite/in/bhupendra-kumar-chandrakar)
