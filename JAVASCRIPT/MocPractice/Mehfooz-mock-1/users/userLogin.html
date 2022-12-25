@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form1">
+      <input id="email" placeholder="email" type="email" />
+      <input id="password" placeholder="password" type="password" />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+
+<script>
+  let array = JSON.parse(localStorage.getItem("sign")) || {};
+  let array1 = JSON.parse(localStorage.getItem("login")) || {};
+  document.querySelector("form").addEventListener("submit", hello);
+
+  let obj;
+
+  async function hello(e) {
+    e.preventDefault();
+
+    let login = {
+      email: form1.email.value,
+      password: form1.password.value,
+    };
+    //  console.log(login)
+    //  console.log(array)
+    if (array1 == null) {
+      alert("create account");
+    }
+    if (login.email == array.email && login.password == array.password) {
+      alert("LogIn Sucessfull");
+      localStorage.setItem("login", JSON.stringify(login));
+      window.location.href="../index.html"
+    } else {
+      alert("Invalid Credentials");
+    }
+  }
+</script>
