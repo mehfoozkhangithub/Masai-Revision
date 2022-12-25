@@ -1,4 +1,7 @@
 document.querySelector("form").addEventListener("submit", func);
+// let cost=document.getElementById("cost").value;
+// console.log(cost)
+
 
 let obj;
 
@@ -12,8 +15,8 @@ async function func(e) {
     genere: form1.genere.value,
     edition: form1.edition.value,
     publish: form1.publish.value,
-    cost: form1.cost.value,
-    borrow: form1.borrow.value,
+    cost: Number(form1.cost.value),
+    borrow: JSON.parse(form1.borrow.value),
   };
   console.log(obj);
   let res = await fetch(`https://live-api.onrender.com/data`, {
@@ -23,6 +26,6 @@ async function func(e) {
       "Content-Type": "application/json",
     },
   });
-  window.location.reload();
+  // window.location.reload();
 }
 
