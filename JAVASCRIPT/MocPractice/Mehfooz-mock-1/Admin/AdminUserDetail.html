@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+          <th>TimeStamp</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
+<script>
+  fetch("https://live-api.onrender.com/user")
+    .then((response) => response.json())
+    .then((data) => {
+      append(data);
+      console.log(data);
+    })
+    .catch((err) => console.error(err));
+
+  function append(data) {
+    console.log(data);
+    data.forEach(function (el, index) {
+      console.log(el);
+      let tr = document.createElement("tr");
+
+      let td1 = document.createElement("td");
+      td1.innerText = el.email;
+      let td2 = document.createElement("td");
+      td2.innerText = el.password;
+      let td3 = document.createElement("td");
+      td3.innerText = el.timeStamp;
+
+      tr.append(td1, td2, td3);
+      document.querySelector("tbody").append(tr);
+    });
+  }
+</script>

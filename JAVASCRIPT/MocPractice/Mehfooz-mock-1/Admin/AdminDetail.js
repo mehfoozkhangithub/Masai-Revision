@@ -11,8 +11,14 @@ fetch('https://live-api.onrender.com/data')
 function append(data) {
     console.log(data)
 data.forEach(function(el,index){
+  console.log(el)
   let tr=document.createElement("tr")
 
+
+  let td11=document.createElement("td")
+  td11.innerText=el.id
+
+  console.log("hello",td11)
   let td1=document.createElement("td")
   td1.innerText=el.name
   let td2=document.createElement("td")
@@ -28,7 +34,7 @@ data.forEach(function(el,index){
   let td7=document.createElement("td")
   td7.innerText=el.borrow
   let td8=document.createElement("td")
-  td8.innerText=el.borrow
+  td8.innerText=el.image
 //   let img=document.createElement("img")
 //   img.setAttribute("src",el.name)
 //   img.append(td8)
@@ -37,24 +43,46 @@ data.forEach(function(el,index){
   td10.innerText="Edit"
   td10.setAttribute("class","deleteText")
   td10.addEventListener("click",function(){
-    editItem(el,index)
+    editItem(el.id)
   })
+
+
   let td9=document.createElement("td")
   td9.innerText="Delete"
   td9.setAttribute("class","deleteText")
   td9.addEventListener("click",function(){
-    deleteItem(el,index)
+    deleteItem(el.id)
   })
 //   td9.innerText=el.
-tr.append(td8,td1,td2,td3,td4,td5,td6,td7,td10,td9)
+tr.append(td11,td8,td1,td2,td3,td4,td5,td6,td7,td10,td9)
 document.querySelector("tbody").append(tr)
 
 })
 
 }
 
-function deleteItem(el,index){
-    data.splice(index,1)
-    window.location.reload()
+
+
+function editItem(id){
+  console.log(id)
+  window.localStorage.setItem("edit",JSON.stringify(id))
+  window.location.href="./AdminEdit.html";
+
+
+}
+
+
+
+
+ async function deleteItem(id){
+  let res=await fetch(`https://live-api.onrender.com/data/${id}`,{
+    method:'DELETE',// in these we delete body
+    headers:{
+        'Content-Type':'application/json',
+    }
+})
+
+window.location.reload();
+
 }
 

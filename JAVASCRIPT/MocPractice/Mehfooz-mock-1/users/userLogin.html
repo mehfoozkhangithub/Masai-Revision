@@ -25,10 +25,12 @@
 
   async function hello(e) {
     e.preventDefault();
+    // let date=new Date();
 
     let login = {
       email: form1.email.value,
       password: form1.password.value,
+      timeStamp:Date.now() ,
     };
     //  console.log(login)
     //  console.log(array)
@@ -37,8 +39,15 @@
     }
     if (login.email == array.email && login.password == array.password) {
       alert("LogIn Sucessfull");
-      localStorage.setItem("login", JSON.stringify(login));
-      window.location.href="../index.html"
+      
+      let res = await fetch(`https://live-api.onrender.com/user`, {
+        method: "POST", // in thise we send body
+        body: JSON.stringify(login),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      // window.localStorage.removeItem("sign")
     } else {
       alert("Invalid Credentials");
     }

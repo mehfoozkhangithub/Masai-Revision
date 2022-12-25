@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="back">
+        <button id="back1">BACK</button>
+    </div>
+    <div class="container">
+        <button id="user">User</button>
+        <button id="detail">Detail Page</button>
+        <button id="data">ADD Data</button>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("user").addEventListener("click",func1);
+    document.getElementById("detail").addEventListener("click",func2);
+    document.getElementById("data").addEventListener("click",func3);
+    document.getElementById("back1").addEventListener("click",func4);
+
+    function func1(){
+        // window.location.href="./AdminDetail.html"
+    }
+    function func2(){
+        window.location.href="./AdminDetail.html"
+    }
+    function func3(){
+        window.location.href="./admin.html"
+    }
+    function func4() {
+        window.location.href="./AdminLogin.html"
+    }
+
+
+</script>

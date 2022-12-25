@@ -11,7 +11,6 @@ async function func(e) {
     username: form1.username.value,
     email: form1.email.value,
     password: form1.password.value,
-  
   };
   console.log(obj);
    

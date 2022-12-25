@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1">
+        <input id="image" placeholder="image" type="text" />
+        <input id="name" placeholder="name" type="text" />
+        <input id="author" placeholder="author" type="text" />
+        <input id="genere" placeholder="genere" type="text" />
+        <input id="edition" placeholder="edition" type="text" />
+        <input id="publish" placeholder="publish" type="date" />
+        <input id="cost" placeholder="cost" type="number" />
+      <select id="borrow" value="">
+          <option value="true">true</option>
+          <option value="false">false</option>
+      </select>
+        <input type="submit" />
+      </form>
+</body>
+</html>
+<script>
+
+
+document.querySelector("form").addEventListener("submit", func);
+let id=JSON.parse(localStorage.getItem("edit"));
+console.log("i am id",id)
+let obj;
+
+async function func(e) {
+  e.preventDefault();
+
+  obj = {
+    image: form1.image.value,
+    name: form1.name.value,
+    author: form1.author.value,
+    genere: form1.genere.value,
+    edition: form1.edition.value,
+    publish: form1.publish.value,
+    cost: form1.cost.value,
+    borrow: form1.borrow.value,
+  };
+  console.log(obj);
+  let res = await fetch(`https://live-api.onrender.com/data/${id}`, {
+    method: "PATCH", // in thise we send body
+    body: JSON.stringify(obj),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  window.localStorage.removeItem("edit")
+  window.location.reload();
+}
+
+
+
+
+
+</script>
