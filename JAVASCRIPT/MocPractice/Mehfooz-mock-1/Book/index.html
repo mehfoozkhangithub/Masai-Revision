@@ -33,8 +33,8 @@
     <div id="filter">
       FILTER BY
 
-      <select id="filter_brand" class="cursor_">
-        <option value="">genere</option>
+      <select id="filter_genere" class="cursor_">
+        <option value="genere">genere</option>
         <option value="Science">Science</option>
         <option value="Fiction">Fiction</option>
         <option value="BRIOGEO">History</option>
@@ -116,4 +116,65 @@ getData();
     }
     
   }
+
+  //filter
+  document
+  .querySelector("#filter_genere")
+  .addEventListener("change", function_fiter_genere);
+
+function function_fiter_genere() {
+  var selected = document.querySelector("#filter_genere").value;
+  if (selected == "genere") {
+   
+  getData()
+  }
+
+  if (selected == "Science") {
+    var display= res.filter(function (el) {
+      return el.genere == "Science";
+    
+    });
+    append(display);
+  }
+
+  if (selected == "Fiction") {
+    var display= res.filter(function (el) {
+      return el.genere == "Fiction";
+    
+    });
+    append(display);
+  }
+  
+  if (selected == "History") {
+    var display= res.filter(function (el) {
+      return el.genere == "BRIOGEO";
+    
+    });
+    append(display);
+  }
+
+    
+  if (selected == "Tech") {
+    var display= res.filter(function (el) {
+      return el.genere == "Tech";
+    
+    });
+    append(display);
+  }
+
+     
+  if (selected == "Business") {
+    var display= res.filter(function (el) {
+      return el.genere == "Business";
+    
+    });
+    append(display);
+  }
+}
+// <option value="">genere</option>
+//         <option value="">Science</option>
+//         <option value="Fiction">Fiction</option>
+//         <option value="BRIOGEO">History</option>
+//         <option value="Tech">Tech</option>
+//         <option value="Business">Business</option>
 </script>
