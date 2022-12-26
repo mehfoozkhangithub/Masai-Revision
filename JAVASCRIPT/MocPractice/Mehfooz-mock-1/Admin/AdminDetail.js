@@ -12,14 +12,14 @@ const getData=()=>{
   .catch(err => console.log(err));
 }
 
-
+getData()
 
 
 function append(data) {
 
 data.forEach(function(el,index){
-  
-  document.createElement("tr").innerText=null;
+
+
   let tr=document.createElement("tr")
 
   let td11=document.createElement("td")
@@ -58,7 +58,8 @@ data.forEach(function(el,index){
   })
 //   td9.innerText=el.
 tr.append(td11,td8,td1,td2,td3,td4,td5,td6,td7,td10,td9)
-document.querySelector("#tbody").append(tr)
+document.querySelector("tbody").append(tr)
+
 
 })
 
@@ -83,9 +84,7 @@ function editItem(id){
         'Content-Type':'application/json',
     }
 })
-
-getData();
+window.location.reload();
 
 }
 
-getData()

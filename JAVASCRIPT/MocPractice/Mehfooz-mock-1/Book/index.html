@@ -46,22 +46,24 @@
   </body>
 </html>
 <script>
-   
-  fetch("https://live-api.onrender.com/data")
-    .then((response) => response.json())
-    .then((data) => {
-  
-      
-      append(data);
-      function_sort_price(data)
-      //    console.log(data)
-    })
-    .catch((err) => console.error(err));
-
-  function append(data) {
+  let res;
+ async function getData() {
+   try {
+        let data= await fetch("https://live-api.onrender.com/data")
+        res=await data.json();
+        console.log(res)
+        append(res)
+      } catch (error) {
+        console.log(error)
+      }
+  }
+getData();
+  function append(res) {
     // console.log(data);
-    data.forEach(function (el, index) {
-    //   console.log(el);
+    document.querySelector("#container").innerHTML = null;
+
+    res.forEach(function (el, index) {
+      //   console.log(el);
       let div1 = document.createElement("div");
 
       let img = document.createElement("img");
@@ -80,7 +82,7 @@
       let td5 = document.createElement("h3");
       td5.innerText = "publish:" + " " + el.publish;
       let td6 = document.createElement("h3");
-      td6.innerText = "cost:" + " " +  el.cost;
+      td6.innerText = "cost:" + " " + el.cost;
 
       let btn = document.createElement("button");
 
@@ -92,23 +94,26 @@
     });
   }
 
-  document.querySelector("#sort_price").addEventListener("change", function_sort_price);
+  document
+    .querySelector("#sort_price")
+    .addEventListener("change", function_sort_price);
 
-function function_sort_price(data) {
-
-  var selected = document.querySelector("#sort_price").value;
-  console.log(selected)
-
-  if (selected == "HTL") {
-     
-   
+  function function_sort_price() {
+    // console.log("first")
+    var selected = document.querySelector("#sort_price").value;
+    // console.log(selected);
+    
+  
+    if (selected == "LTH") {
+      console.log(res)
+      res.sort((a, b) => (a.cost) - (b.cost));
+      append(res)
+    }
+    else{
+      console.log(res)
+      res.sort((a, b) => (b.cost) - (a.cost));
+      append(res)
+    }
+    
   }
-
-  if (selected == "LTH") {
-    data.forEach(function (a, b) {
-      return a.cost - b.cost;
-    });
-    append(data);
-  }
-}
 </script>
