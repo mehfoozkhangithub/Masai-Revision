@@ -1,24 +1,30 @@
-fetch('https://live-api.onrender.com/data')
-.then(response => response.json())
-.then(data => {
-    append(data)
-   console.log(data)
+
+
+
+const getData=()=>{
+
+  fetch('https://live-api.onrender.com/data')
+  .then(response => response.json())
+  .then(data => {
+      append(data)
+  }
+  )
+  .catch(err => console.log(err));
 }
-)
-.catch(err => console.error(err));
+
+
 
 
 function append(data) {
-    console.log(data)
-data.forEach(function(el,index){
-  console.log(el)
-  let tr=document.createElement("tr")
 
+data.forEach(function(el,index){
+  
+  document.createElement("tr").innerText=null;
+  let tr=document.createElement("tr")
 
   let td11=document.createElement("td")
   td11.innerText=el.id
 
-  console.log("hello",td11)
   let td1=document.createElement("td")
   td1.innerText=el.name
   let td2=document.createElement("td")
@@ -35,9 +41,6 @@ data.forEach(function(el,index){
   td7.innerText=el.borrow
   let td8=document.createElement("td")
   td8.innerText=el.image
-//   let img=document.createElement("img")
-//   img.setAttribute("src",el.name)
-//   img.append(td8)
 
   let td10=document.createElement("td")
   td10.innerText="Edit"
@@ -55,7 +58,7 @@ data.forEach(function(el,index){
   })
 //   td9.innerText=el.
 tr.append(td11,td8,td1,td2,td3,td4,td5,td6,td7,td10,td9)
-document.querySelector("tbody").append(tr)
+document.querySelector("#tbody").append(tr)
 
 })
 
@@ -64,7 +67,6 @@ document.querySelector("tbody").append(tr)
 
 
 function editItem(id){
-  console.log(id)
   window.localStorage.setItem("edit",JSON.stringify(id))
   window.location.href="./AdminEdit.html";
 
@@ -82,7 +84,8 @@ function editItem(id){
     }
 })
 
-window.location.reload();
+getData();
 
 }
 
+getData()

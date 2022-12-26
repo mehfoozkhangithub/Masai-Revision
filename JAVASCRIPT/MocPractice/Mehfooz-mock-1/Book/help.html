@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function getData(){
+
+    fetch('https://live-api.onrender.com/data')
+    .then(response => response.json())
+    .then(data =>(fun(data)))
+    .catch(err => console.log(err));
+
+
+}
+
+getData();
+
+    function fun(data){
+      let x=data.sort((a,b)=>{
+        return b.cost - a.cost;
+      })
+      console.log(x)
+    }
+
+</script>

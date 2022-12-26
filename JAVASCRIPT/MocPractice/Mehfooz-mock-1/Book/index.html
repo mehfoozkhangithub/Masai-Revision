@@ -1,82 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #container{
-            display: flex !important;
-            border: 1px solid red;
-            gap: 1rem;
-        }
-        #container>div>img{
-            height:24rem ;
-            width:25rem ;
-            border: 1px solid green;
-        }
-
+      #container {
+        display: flex !important;
+        flex-direction: column;
+        border: 1px solid red;
+        gap: 1rem;
+      }
+      #container > div > img {
+        height: 24rem;
+        width: 25rem;
+        border: 1px solid green;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div>
+      SORT :
+
+      <select id="sort_price" class="cursor_">
+        <option value="">Popularity</option>
+        <option value="LTH">Low To High</option>
+        <option value="HTL">High To Low</option>
+      </select>
+    </div>
+
+    <div id="filter">
+      FILTER BY
+
+      <select id="filter_brand" class="cursor_">
+        <option value="">genere</option>
+        <option value="">Science</option>
+        <option value="Fiction">Fiction</option>
+        <option value="BRIOGEO">History</option>
+        <option value="Tech">Tech</option>
+        <option value="Business">Business</option>
+      </select>
+    </div>
     <div id="container"></div>
-</body>
+  </body>
 </html>
 <script>
+   
+  fetch("https://live-api.onrender.com/data")
+    .then((response) => response.json())
+    .then((data) => {
+  
+      
+      append(data);
+      function_sort_price(data)
+      //    console.log(data)
+    })
+    .catch((err) => console.error(err));
 
-fetch('https://live-api.onrender.com/data')
-.then(response => response.json())
-.then(data => {
-    append(data)
-//    console.log(data)
+  function append(data) {
+    // console.log(data);
+    data.forEach(function (el, index) {
+    //   console.log(el);
+      let div1 = document.createElement("div");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", el.image);
+
+      let div2 = document.createElement("div");
+
+      let td1 = document.createElement("h1");
+      td1.innerText = el.name;
+      let td2 = document.createElement("h3");
+      td2.innerText = "author:" + " " + el.author;
+      let td3 = document.createElement("h3");
+      td3.innerText = "genere:" + " " + el.genere;
+      let td4 = document.createElement("h3");
+      td4.innerText = "edition:" + " " + el.edition;
+      let td5 = document.createElement("h3");
+      td5.innerText = "publish:" + " " + el.publish;
+      let td6 = document.createElement("h3");
+      td6.innerText = "cost:" + " " +  el.cost;
+
+      let btn = document.createElement("button");
+
+      btn.addEventListener("click", () => {});
+
+      div1.append(img);
+      div2.append(td1, td2, td3, td4, td5, td6);
+      document.querySelector("#container").append(div1, div2);
+    });
+  }
+
+  document.querySelector("#sort_price").addEventListener("change", function_sort_price);
+
+function function_sort_price(data) {
+
+  var selected = document.querySelector("#sort_price").value;
+  console.log(selected)
+
+  if (selected == "HTL") {
+     
+   
+  }
+
+  if (selected == "LTH") {
+    data.forEach(function (a, b) {
+      return a.cost - b.cost;
+    });
+    append(data);
+  }
 }
-)
-.catch(err => console.error(err));
-
-
-function append(data) {
-    console.log(data)
-data.forEach(function(el,index){
-  console.log(el)
-  let div1=document.createElement("div");
-
-  let img=document.createElement("img");
-    img.setAttribute("src",el.image)
-
-
-  let div2=document.createElement("div");
-
-  let td1=document.createElement("h1")
-  td1.innerText=el.name
-  let td2=document.createElement("h3")
-  td2.innerText="author:"+" "+el.author
-  let td3=document.createElement("h3")
-  td3.innerText="genere:"+" "+el.genere
-  let td4=document.createElement("h3")
-  td4.innerText="edition:"+" "+el.edition
-  let td5=document.createElement("h3")
-  td5.innerText="publish:"+" "+el.publish
-  let td6=document.createElement("h3")
-  td6.innerText="cost:"+" "+el.cost  
-
-  let btn=document.createElement("button");
-
-    // btn.addEventListener("click",()=>{
-
-    // });
-
-
-
-
-div1.append(img)
-div2.append(td1,td2,td3,td4,td5,td6)
-document.querySelector("#container").append(div1,div2)
-
-})
-
-}
-
-
-
 </script>
