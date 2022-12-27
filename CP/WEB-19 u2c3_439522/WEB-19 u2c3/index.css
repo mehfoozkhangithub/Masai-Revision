@@ -1,0 +1,78 @@
+/* Fill CSS here */
+
+h1{
+    text-align: center;
+    color: blue;
+}
+
+div{
+    display: flex;
+}
+ form{
+     /* border: 1px solid red; */
+     /* height: 600px; */
+     width: 30%;
+     font-size: 20px;
+     /* padding-top: 3%; */
+     /* padding-left: 20px; */
+     margin-top: 30px;
+     padding: 30px;
+     margin: auto;
+     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+ }
+
+ label{
+    font-size: 18px;
+ }
+
+table{
+   width: 60%;
+   margin: auto;
+   margin-top: 40px;
+   text-align: center;
+
+}
+
+select{
+    width: 90%;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+table th{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+    background-color: blue;
+    color:white;
+}
+
+table td,
+table th{
+    /* border: 1px solid red; */
+    padding: 7px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+input{
+ width: 90%;
+ padding: 15px;
+ box-sizing: border-box;
+ 
+}
+
+input[type="submit"]{
+    width: 90%;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    border-radius: 17px;
+    border: 0px;
+    font-size: 19px;
+    padding-top: 17px 20px;
+    margin-top: 3%;
+    
+
+}

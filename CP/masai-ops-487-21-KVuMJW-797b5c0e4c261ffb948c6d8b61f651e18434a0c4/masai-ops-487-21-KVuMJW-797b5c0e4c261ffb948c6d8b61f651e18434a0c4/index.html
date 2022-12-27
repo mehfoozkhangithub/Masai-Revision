@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch Random Joke App</title>
+</head>
+<body>
+    <section class="container">
+        <!-- note : donot add onclick or onchnage events here -->
+        <button id="get-jokes-data">Get a random joke</button>
+        <select  id = "get-category">
+            <option  value="">--select--</option>
+            <option  value="animal">animal</option>
+            <option  value="career">career</option>
+            <option  value="celebrity">celebrity</option>
+            <option  value="dev">dev</option>
+
+           <!-- add all four categories here in option  -->
+        </select>
+        <div id = "joke-container"></div>
+    </section>
+    <script src="./src/jokesApp.js" ></script>
+</body>
+</html>

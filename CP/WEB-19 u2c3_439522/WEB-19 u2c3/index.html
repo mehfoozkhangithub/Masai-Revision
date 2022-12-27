@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2C3</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>Masai Employee Records</h1>
+
+    <div>
+      <!-- ***** We are using form here  ****  -->
+      <form>
+        <label for="">Employee Name</label><br />
+        <input id="name" type="text" placeholder="Enter Student Name" /><br />
+        <label for="">Employee ID</label><br />
+        <input
+          id="employeeID"
+          type="number"
+          placeholder="Enter Employee ID"
+        /><br />
+        <label for="">Department </label><br />
+        <select id="department">
+          <option value="">Select Department</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Operations">Operations</option>
+          <option value="HR">HR</option>
+          <option value="IA">IA</option></select
+        ><br />
+        <label for="">Experience </label><br />
+        <input id="exp" type="number" placeholder="Experience in Years" /><br />
+        <label for="">Email Address </label><br />
+        <input type="text" id="email" placeholder="Enter Email Address" /><br />
+        <label for="">Mobile Number </label><br />
+        <input id="mbl" type="number" placeholder="Enter Mobile number" /><br />
+        <input type="submit" />
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Employee ID</th>
+            <th>Department</th>
+            <th>Experience in years</th>
+            <th>Email address</th>
+            <th>Mobile Number</th>
+            <th>Role</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Append your output here -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script src="record.js"></script>
