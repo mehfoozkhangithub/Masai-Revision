@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUESTION-2</title>
+</head>
+<body>
+    <h1>Product of array </h1>
+</body>
+</html>
+<script>
+    /*
+    OUT-PUT what :-) 
+      first arr  - 24 12 8 6
+      second arr - 0 0 9 0 0    .
+    */
+
+
+    // test-case 1
+    let n=4;
+    let arr1=[1,2,3,4];
+    // test-case 2
+    let m=5;
+    let arr2=[-1,1,0,3,-3];
+
+
+    // here we have to take stack data structure
+    let stack=[];
+    //  here we have to take left and right variable 
+    let left=1;
+    let right=1;
+    
+    for(let i=0;i<arr2.length;i++){
+        stack[i]=left; 
+        left*=arr2[i];
+    }
+
+    for(let i=arr2.length-1;i>=0;i--){
+        stack[i]*=right;
+        right*=arr2[i];
+    }
+
+    console.log(stack);
+
+</script>
