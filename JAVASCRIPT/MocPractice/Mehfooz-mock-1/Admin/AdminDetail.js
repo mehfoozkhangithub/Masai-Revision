@@ -70,8 +70,6 @@ document.querySelector("tbody").append(tr)
 function editItem(id){
   window.localStorage.setItem("edit",JSON.stringify(id))
   window.location.href="./AdminEdit.html";
-
-
 }
 
 
