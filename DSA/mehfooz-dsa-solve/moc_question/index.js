@@ -1,30 +1,23 @@
-// !  Poblem detail to solve
+/* 
 
-let tc = 3;
-let n1 = 3;
-let arr1 = new Set([1, 2, 0]); //* output :- 3
-let n2 = 4;
-let arr2 = new Set([3, 4, -1, 1]); //* output :- 2
-let n3 = 5;
-let arr3 = new Set([7, 8, 9, 11, 12]); //* output :- 1
 
-const solve = () => {
-  let smallVal = 1;             // here we have assigning the value which is low 
 
-  for (let i of arr3) {
-    if (i > 0 && i < smallVal) { // here we are take care for -nev value and small value ;
-      smallVal = i;    // here we assign the small value to current loop value;
-    }
-  }
 
-  for (let x of arr3) {
-    if (x === smallVal) { // here the array value  compairing the small value;
-      smallVal++;      // after compairing increment the small value;
-    }
-  }
+*/
 
-  return smallVal; // return the small value;
-};  
 
-let ans = solve();
-console.log(ans);  // output ans value;
+let size=4;
+
+
+let arr1=new Set([0,0,0]);
+let arr2=new Set([0,1,0]);
+let arr3=new Set([1,0,1]);
+let arr4=new Set([0,1,0,1,1,0,1,1,0,1,1,1,1,0]);
+
+let count=0;
+for(let i of arr1){
+   if(i==="1"&&i!=="1"){
+    count++;
+   }
+}
+console.log(count);
