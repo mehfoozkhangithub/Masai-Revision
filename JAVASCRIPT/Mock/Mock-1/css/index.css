@@ -1,0 +1,227 @@
+.work-div-div{
+    height: 600rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar -start */
+
+.nav-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  z-index: 999;
+}
+
+.logo-name {
+  font-size: x-large;
+}
+.logo {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+}
+.nav-div {
+  color: white;
+  background-image: url("https://cdn.pixabay.com/photo/2021/01/23/18/08/hills-5943233_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+
+.nav-3 {
+  padding: 13rem;
+  margin: auto;
+  text-align: center;
+  font-size: xx-large;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn-1 {
+  padding: 1rem;
+  margin-right: 5px;
+  border-radius: 1rem;
+  border: 1px solid white;
+  background-color: crimson;
+  color: white;
+}
+.btn-2 {
+  padding: 1rem;
+  width:10rem;
+  margin-right: 5px;
+  border-radius: 1rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+@media all and (min-width: 425px) and (max-width: 768px) {
+  .nav-div {
+    color: white;
+    background-image: url("https://cdn.pixabay.com/photo/2021/01/23/18/08/hills-5943233_1280.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+    height: fit-content;
+  }
+  .btn-p{
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center
+  }
+  .btn-1 {
+  /* padding: 1rem; */
+  /* margin-right: 5px; */
+  width: 11rem;
+  border-radius: 1rem;
+  border: 1px solid white;
+  background-color: crimson;
+  color: white;
+  text-align: center;
+}
+.btn-2 {
+  margin-right: 5px;
+  border-radius: 1rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  width: 11rem;
+  height: auto;
+}
+}
+
+
+@media all and (min-width: 300px) and (max-width: 432px) {
+    .nav-div {
+        color: white;
+        background-image: url("https://cdn.pixabay.com/photo/2021/01/23/18/08/hills-5943233_1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: fit-content;
+        height: fit-content;
+      }
+      .btn-1 {
+      padding: 1rem;
+      margin-right: 5px;
+      border-radius: 1rem;
+      border: 1px solid white;
+      background-color: crimson;
+      color: white;
+    }
+    .btn-2 {
+      padding: 1rem;
+      margin-right: 5px;
+      border-radius: 1rem;
+      border: 1px solid white;
+      color: white;
+      background-color: transparent;
+      width: 11.3rem;
+      margin-top:1rem ;
+    }
+}
+
+.name-tag{
+  color: goldenrod;
+}
+.hello-div{
+  border: 1px solid red;
+  text-align: center;
+}
+
+@media all and (min-width:425px) and (max-width:768px) {
+    .hello-div{
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+
+@media all and (min-width:324px) and (max-width:425px){
+    .hello-div{
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+    }
+}
+/* navbar-end */
+
+/* work-section start   */
+/* work-section  end */
+
+
+
+/* post- section start  */
+
+
+.icons-div{
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  text-align: center;
+}
+
+.aprt-div{
+  border: 2px solid black;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 8px;
+}
+.img-hu{
+  width: 7rem;
+  height: 7rem;
+}
+ 
+.detail-grid>.do-flex-div{
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 5rem;
+}
+
+.div-sec-1{
+    border: 2px solid blue;
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+    text-align: justify;
+}
+
+
+@media all and (min-width: 425px) and (max-width: 768px) {
+
+  
+
+
+
+}
+
+
+@media all and (min-width: 300px) and (max-width: 432px) {
+
+  
+
+
+}
+

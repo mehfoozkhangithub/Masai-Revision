@@ -12,6 +12,43 @@
 </html>
 <script>
 
+let str1="aba";
+let str2="abca";
+let str3="abc";
 
-    
+
+const searchPalindrom =(str)=>{
+    console.log(str)    
+    let revStr=str.split('').reverse().join('');
+    console.log(revStr);
+    console.log(str===revStr)
+    return str===revStr  
+}
+
+const canMakePalindrom=(str)=>{
+    let flags=false;
+    console.log(str)
+    for(let i=0;i<str.length;i++){
+        let charToRemove=str[i];
+        console.log(charToRemove);
+        let newString=str.slice(0,i)+str.slice(i+1);
+        console.log(newString);
+        if(searchPalindrom(newString)){
+            flags=true;
+        }
+    }
+    return flags
+}
+
+let ans=canMakePalindrom(str1)
+
+console.log(ans)
+
+if(ans===true){
+    console.log("YES")
+}
+else{
+    console.log("NO")
+}
+
 </script>
