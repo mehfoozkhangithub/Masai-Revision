@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Insert Array</title>
+  </head>
+  <body>
+    <input type="number" class="newPosition" placeholder="Enter new position" />
+    <input type="number" class="newElement" placeholder="Enter new element" />
+    <button onclick="myFunc()">Insert</button>
+  </body>
+</html>
+<script>
+  //  this is without splice
+  /* const myFunc = () => {
+    let arr = [40, 30, 80, 60, 70];
+    console.log("before",arr);
+    let pos = document.querySelector(".newPosition").value;
+    let elem = document.querySelector(".newElement").value;
+    elem=parseInt(elem);
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (i >= pos) {
+        arr[i + 1] = arr[i];
+        if (i == pos) {
+          arr[i] = elem;
+        }
+      }
+    }
+    console.log("after",arr);
+  }; */
+
+  //  basically you can take splice its simillarly
+
+  const myFunc = () => {
+    let arr = [40, 30, 80, 60, 70];
+    console.log("before", arr);
+    let pos = document.querySelector(".newPosition").value;
+    let elem = document.querySelector(".newElement").value;
+    elem = parseInt(elem);
+
+    arr.splice(pos,0,elem);
+  };
+</script>

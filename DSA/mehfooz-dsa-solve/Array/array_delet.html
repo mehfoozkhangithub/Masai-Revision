@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delete Array</title>
+  </head>
+  <body>
+    <input type="text" placeholder="enter position" class="position" />
+    <button onclick="myFunc()">Delete</button>
+  </body>
+</html>
+<script>
+  // this is static code
+
+  // let arr=[12,20,40,50,60];
+  // let position=3;
+
+  // console.log("before",arr)
+
+  // for(let i=position; i<arr.length; i++){
+
+  //     arr[i]=arr[i+1]; // this is coping the forward position element to current position element;
+
+  // }
+  // arr.length=arr.length-1; // this is fixing the length for the arr to cover the duplicate element come last;
+
+  // console.warn("after",arr)
+
+  const myFunc = () => {
+    let arr=[12,20,40,50,60];
+    console.warn("before",arr);
+    let position=document.querySelector(".position").value;
+    position=parseInt(position);
+    for (let i = position; i < arr.length; i++) {
+        
+        arr[i]=arr[i+1];
+
+    }
+    arr.length=arr.length-1;
+    console.warn("after",arr);
+  };
+</script>

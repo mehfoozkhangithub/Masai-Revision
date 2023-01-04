@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DSA</title>
+  </head>
+  <body>
+    <h1>Array_Traverse</h1>
+
+    <div id="main">
+      <input type="number" id="element" />
+      <button onclick="showData()">GET DATA</button>
+    </div>
+  </body>
+</html>
+<script>
+  let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+  // for(let x of array){
+  // }
+  const showData = () => {
+      let val = document.getElementById("element").value;
+    if (val < array.length) {
+      alert(array[val]);
+    } else {
+      alert("Please enter a valid value!");
+    }
+  };
+</script>

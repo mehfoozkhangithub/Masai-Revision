@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search array</title>
+</head>
+<body>
+    <input type="text" class="element" />
+    <button onclick="myFunc()">Search</button>
+</body>
+</html>
+<script>
+    //  this is static code 
+
+    /* let arr=[22,45,66,77,44,90];
+    let index=undefined;
+    let item=77; // index is "3"
+
+    for(let i=0; i<arr.length; i++){
+
+        if(arr[i]===item){
+            index=i;
+            break;
+        }
+    }
+    console.error(index); */
+
+
+    //  this is dynamic code 
+    let arr=[22,45,66,77,44,90];
+    console.table(arr);
+    const myFunc=()=>{
+    let el=document.querySelector(".element").value;
+    el=parseInt(el);
+    // let index=undefined;
+
+    // for(let i=0;i<arr.length;i++){
+    //     if(arr[i]===el){
+    //         index=i;
+    //         break;
+    //     }
+    // }
+    // console.error(index);
+    
+    //  or you can use inBuild function like indexOf
+
+    console.error(arr.indexOf(el));
+    }
+
+
+</script>
