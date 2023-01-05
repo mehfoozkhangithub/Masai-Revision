@@ -9,7 +9,47 @@
 </html>
 <script>
 
-    
+   // this is static code 
 
+let arr1=[10,50,99,47,33];
+let arr2=[20,40,88,36,44];
+
+let arr3=[];
+
+
+// for(let i=0;i<arr1.length;i++){
+//    arr3.push(arr1[i]);
+// }
+
+// for(let i=0;i<arr2.length;i++){
+//    arr3.push(arr2[i]);
+// }
+
+// console.warn(arr1);
+// console.warn(arr2);
+
+
+// console.table(arr3);
+
+// this is dynamic or inBuild function ;
+
+// let arr3=[...arr1,...arr2];
+
+// console.warn(arr3);
+
+
+
+// this is without push method you can apply
+
+for (let i = 0; i < arr1.length; i++) {
+ arr3[i]=arr1[i];
+   
+}
+for (let i = 0; i < arr2.length; i++) {
+ arr3[arr1.length+i]=arr2[i];
+   
+}
+
+console.table(arr3);
 
 </script>
