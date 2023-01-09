@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marging collapes</title>
+    <style>
+        /**
+        *! basically collapes is shareing the margin value between to div or you can say element if first dicv have 30px margin and second dicv have 30px margin they share there margin if  secind dicv have 20px margin  the first div share his own margin with 30px give 20px to div second this is margin collapes 
+        * * note this is inerview  question upper answer 
+        * ? this is for box -sizing:border-box which is give us content+padding+margin with in and if we take box-siging:content-box will take the above the parent div and they take own property like content/padding/margin by default/user will give.
+          */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color:rebeccapurple ;
+            margin: 30px;
+            height:2320px;
+            width:233px;
+            border: 2px solid black;
+        }
+        .box2{
+            background-color:chartreuse ;
+            margin: 20px;
+            height:20px;
+            padding:6px;
+            border: 5px solid gray;
+            box-sizing: content-box;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, enim! Esse hic dolores fugiat est nihil inventore amet reprehenderit neque aut consequuntur placeat quae necessitatibus aliquam cumque error, porro incidunt praesentium saepe. Nesciunt, nisi?
+    </div>
+    <div class="box2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque ut aperiam ipsa molestias deserunt veritatis fuga recusandae architecto. Voluptas repellendus blanditiis quisquam soluta mollitia dignissimos atque, labore quam reprehenderit ea itaque ut quae ad.
+    </div>
+</body>
+</html>
