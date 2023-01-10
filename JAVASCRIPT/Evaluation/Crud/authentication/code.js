@@ -1,5 +1,5 @@
 let Register = async () => {
-  //collect al the data
+  //collect all the data
   let register_data = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
