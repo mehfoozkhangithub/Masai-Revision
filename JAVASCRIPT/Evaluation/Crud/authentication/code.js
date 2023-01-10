@@ -46,6 +46,13 @@ let Login = async () => {
   console.log("data:", data);
 };
 
+
+// if(i==y){
+// console.log(i)
+// }
+
+
+
 //get  data from server
 let getProfile = async (username, token) => {
   //username

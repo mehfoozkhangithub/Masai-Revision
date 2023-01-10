@@ -1,9 +1,9 @@
 let Array = [1, 2, 3, 4, 5, 6, 7, 8];
 
-let str = "mehfooz";
+let string = "mehfooz";
 
 const main2 = () => {
-  for (let x of str) {
+  for (let x of string) {
     console.log(x);
   }
 };
@@ -15,3 +15,21 @@ function main() {
 }
 
 main2();
+
+main();
+
+
+
+let object={
+  name:"mehfooz",
+  age:23,
+  study:"Graguate University in Mumbai",
+  status:"Unmarid",
+  job:"Not haved!"
+}
+
+
+for(let x in object) {
+console.log("*************************************************************")
+  console.log(object[x])
+}
