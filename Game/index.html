@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X and O game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game">
+  <div class="line h-1">
+  </div>
+  <div class="line h-2">
+  </div>
+  <div class="line v-1">
+  </div>
+  <div class="line v-2">
+  </div>
+  <div id="1" class="input" onclick="putValue(0)"></div>
+  <div id="2" class="input" onclick="putValue(1)"></div>
+  <div id="3" class="input" onclick="putValue(2)"></div>
+  <div id="4" class="input" onclick="putValue(3)"></div>
+  <div id="5" class="input" onclick="putValue(4)"></div>
+  <div id="6" class="input" onclick="putValue(5)"></div>
+  <div id="7" class="input" onclick="putValue(6)"></div>
+  <div id="8" class="input" onclick="putValue(7)"></div>
+  <div id="9" class="input" onclick="putValue(8)"></div>
+</div>
+<div class="winner_div">
+  <div>
+    <h2 id="winner"></h2>
+    <div id="who_win"></div>
+  </div>
+</div>
+
+<div class="side_">
+  <div class="body">
+    <div class="top"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+    <div class="left_eye">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="right_eye">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nose"></div>
+    <div class="left_check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="right_check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="mouth">
+      <div class="teeth teeth_left"> </div>
+      <div class="teeth teeth_right"> </div>
+    </div>
+    <div class="chin chin_left"></div>
+    <div class="chin chin_right"> </div>
+    <div class="dots"></div>
+    <div class="dots dots_1"></div>
+    <div class="dots dots_2"></div>
+    <div class="dots dots_3"></div>
+    <div class="s-dots"></div>
+    <div class="s-dots s-dots_1"> </div>
+    <div class="s-dots s-dots_2">
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="main.js"></script>
