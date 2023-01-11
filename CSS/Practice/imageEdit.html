@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Edit</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- this is image tag I get from the i level down in folder -->
+    <img src="img.jpg" alt="..." id="car" width="100%">
+    <!-- this is range input tag -->
+    <input type="range" value="100" id="slider" min="0" max="100" />
+</body>
+</html>
+<script>
+    // this is input we getting form body and putting on some random variable  
+    slider.oninput=changeOpacity;
+    // this is function we get the value and setting  the opacity
+    function changeOpacity(){
+        car.style.opacity=this.value/100;
+    }
+</script>
