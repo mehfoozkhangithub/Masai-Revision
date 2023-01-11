@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="range" id="range">
+    <input type="text" id="text">
+    <div id="div"></div>
+    <span id="span"></span>
+    <h4 id="h4_input"></h4>
+</body>
+</html>
+<script>
+    range.oninput=val;
+
+    function val(){
+        text.value=this.value;
+        div.innerText=this.value;
+        span.innerText=this.value;
+        h4_input.innerText=this.value;
+    }
+    
+
+</script>

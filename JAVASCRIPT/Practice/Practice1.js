@@ -23,9 +23,9 @@ main();
 let object={
   name:"mehfooz",
   age:23,
-  study:"Graguate University in Mumbai",
-  status:"Unmarid",
-  job:"Not haved!"
+  study:"Grauate University in Mumbai",
+  status:"Unmarried",
+  job:"Not have!"
 }
 
 
