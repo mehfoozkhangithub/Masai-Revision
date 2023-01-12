@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Video Background</title>
+    <style>
+        .showcase{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .showcase video{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        .title
+        {
+            width: 100%;
+            height: 100%;
+            /* background-color: #000; */
+            background-color: red;
+            font-size: 100px;
+            color: #fff;
+            mix-blend-mode: multiply;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="showcase">
+        <video src="./video1.mp4" autoplay loop muted></video>
+        <h1 class="title">BEYOND</h1>
+    </section>
+</body>
+</html>
