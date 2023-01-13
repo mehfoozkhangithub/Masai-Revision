@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Glow</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        background: #2a2734;
+        font-family: 'Poppins','sans-serif';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      ul{
+        display: flex;
+      }
+      li{
+        list-style: none;
+      }
+      div{
+        height: 80px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 46px;
+        cursor: pointer;
+        margin: 0 4px;
+        color: yellow;
+        text-shadow: 0 0 15px yellow 0 0 25px yellow;
+        animation: animation 1.5s linear infinite;
+      }
+      @keyframes animation {
+        0%{
+            filter: hue-rotate(0deg);
+        }
+        100%{
+            filter: hue-rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>H</div>
+      </li>
+      <li>
+        <div>e</div>
+      </li>
+      <li>
+        <div>y</div>
+      </li>
+      <li>
+        <div>!</div>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <div>M</div>
+      </li>
+      <li>
+        <div>e</div>
+      </li>
+      <li>
+        <div>h</div>
+      </li>
+      <li>
+        <div>f</div>
+      </li>
+      <li>
+        <div>o</div>
+      </li>
+      <li>
+        <div>o</div>
+      </li>
+      <li>
+        <div>z</div>
+      </li>
+    </ul>
+  </body>
+</html>
