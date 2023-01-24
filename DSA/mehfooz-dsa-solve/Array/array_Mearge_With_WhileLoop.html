@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <title>merge two in array with while loop</title>
+  </head>
+  <body></body>
 </html>
 <script>
-    let arr1=[1,4,5,2,8,0];
-   for (let i = 0; i < arr1.length; i++) {
-    console.table(arr1[i]);
-   }
+  let arr1 = [1, 2, 4, 5, 8, 0];
+  let arr2 = [3, 6, 7, 10];
+  let arr3 = [];
+
+  var d1 = 0;
+  var d2 = 0;
+  var d3 = 0;
+
+  while (d1 < arr1.length && d2 < arr2.length) {
+    if (arr1[d1] < arr2[d2]) {
+      arr3[d3] = arr1[d1];
+      d1++;
+      console.log(d1);
+    } else {
+      arr3[d3] = arr2[d2];
+      d2++;
+      console.log(d2);
+    }
+    d3++;
+  }
+  // console.log(d3)
+
+  while (d2 < arr2.length) {
+    arr3[d3] = arr2[d2];
+    d2++;
+    d3++;
+  }
+  console.log(arr3);
 </script>
