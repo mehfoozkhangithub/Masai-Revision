@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="color-scheme" content="light">
+    <title>Dark/Light Mode</title>
+    <style>
+        .container{
+            border: 1px solid red;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+            padding: 17.55rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>this is dark mode</h1>
+        <hr/>
+        <select onchange="switchTheme()" id="theme">
+            <option value="Light">Light</option>
+            <option value="Dark">Dark</option>
+        </select>
+    </div>
+   
+</body>
+</html>
+<script>
+
+
+    function switchTheme() {
+        const theme = document.querySelector("#theme").value;
+        document.getElementsByTagName("meta")[0].content=theme;
+    }
+</script>
