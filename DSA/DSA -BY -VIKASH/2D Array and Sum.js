@@ -35,7 +35,7 @@
          }
      }
      if (i<a.length-2 && j<a[j].length-2) 
-     {// finding the sum along the diagoanls
+     {// finding the sum along the diagonals
          var temp = a[i+2][j] + a[i+1][j+1] + a[i][j+2];
          if (temp == sum)
          {
