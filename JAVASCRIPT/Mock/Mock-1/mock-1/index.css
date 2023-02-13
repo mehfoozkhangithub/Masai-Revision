@@ -189,7 +189,7 @@ header {
 /* ======== start content-1 ========= */
 
 .cont-1 {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   margin: 50px 0;
   padding-bottom: 50px;
 }
@@ -324,5 +324,242 @@ header {
 /* ======== end content-1 ========= */
 
 /* ======== start Apartment-2 ========= */
+b {
+  text-decoration: underline;
+  font-size: medium;
+  font-weight: 600;
+}
+
+#apartment .grid-body-cont-1,
+.grid-body-cont-2,
+.grid-body-cont-3,
+.grid-body-cont-4 {
+  padding: 40px;
+}
+
+#apartment .grid-body-img-1,
+.grid-body-img-2,
+.grid-body-img-3,
+.grid-body-img-4 {
+  background-image: url("./mock-1-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+}
+
+#apartment,
+.cont-1-head,
+.cont-2-head {
+  /* border: 1px solid red; */
+}
+
+#apartment .cont-2-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-template-areas:
+    "grid-body-img-1  grid-body-cont-2 grid-body-img-3 grid-body-cont-4"
+    "grid-body-cont-1 grid-body-img-2 grid-body-cont-3 grid-body-img-4";
+}
+
+.grid-body-img-1 {
+  grid-area: grid-body-img-1;
+}
+.grid-body-img-2 {
+  grid-area: grid-body-img-2;
+}
+.grid-body-img-3 {
+  grid-area: grid-body-img-3;
+}
+.grid-body-img-4 {
+  grid-area: grid-body-img-4;
+}
+
+.grid-body-cont-1 {
+  grid-area: grid-body-cont-1;
+}
+.grid-body-cont-2 {
+  grid-area: grid-body-cont-2;
+}
+.grid-body-cont-3 {
+  grid-area: grid-body-cont-3;
+}
+.grid-body-cont-4 {
+  grid-area: grid-body-cont-4;
+}
+
+#apartment .btn-cont-grid {
+  display: block;
+  margin: auto;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
+
+#apartment .btn-cont-grid {
+  transition-duration: 0.4s;
+}
+#apartment .btn-cont-grid:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #apartment {
+    /* border: 1px solid red; */
+    top: -91px;
+  }
+  #apartment .cont-2-body {
+    display: grid;
+    width: fit-content;
+    margin: 0px;
+    padding: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 68px;
+    grid-template-areas:
+      "grid-body-img-1  grid-body-cont-1"
+      "grid-body-img-2 grid-body-cont-2"
+      "grid-body-cont-3 grid-body-img-4"
+      "grid-body-img-3 grid-body-cont-4";
+  }
+
+  .grid-body-img-1 {
+    grid-area: grid-body-img-1;
+  }
+  .grid-body-img-2 {
+    grid-area: grid-body-img-2;
+  }
+  .grid-body-img-3 {
+    grid-area: grid-body-img-3;
+  }
+  .grid-body-img-4 {
+    grid-area: grid-body-img-4;
+  }
+
+  .grid-body-cont-1 {
+    grid-area: grid-body-cont-1;
+  }
+  .grid-body-cont-2 {
+    grid-area: grid-body-cont-2;
+  }
+  .grid-body-cont-3 {
+    grid-area: grid-body-cont-3;
+  }
+  .grid-body-cont-4 {
+    grid-area: grid-body-cont-4;
+  }
+
+  #apartment .btn-cont-grid {
+    transition-duration: 0.4s;
+  }
+  #apartment .btn-cont-grid:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #apartment {
+    /* border: 1px solid red; */
+    margin-top: -90px !important;
+  }
+  #apartment .cont-2-body {
+    display: grid;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "grid-body-img-1"
+      "grid-body-cont-1"
+      "grid-body-img-2"
+      "grid-body-cont-2"
+      "grid-body-img-3"
+      "grid-body-cont-3"
+      "grid-body-img-4"
+      "grid-body-cont-4";
+  }
+
+  .grid-body-img-1 {
+    grid-area: grid-body-img-1;
+  }
+  .grid-body-img-2 {
+    grid-area: grid-body-img-2;
+  }
+  .grid-body-img-3 {
+    grid-area: grid-body-img-3;
+  }
+  .grid-body-img-4 {
+    grid-area: grid-body-img-4;
+  }
+
+  .grid-body-cont-1 {
+    grid-area: grid-body-cont-1;
+  }
+  .grid-body-cont-2 {
+    grid-area: grid-body-cont-2;
+  }
+  .grid-body-cont-3 {
+    grid-area: grid-body-cont-3;
+  }
+  .grid-body-cont-4 {
+    grid-area: grid-body-cont-4;
+  }
+
+  #apartment .btn-cont-grid {
+    transition-duration: 0.4s;
+  }
+  #apartment .btn-cont-grid:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+}
 
 /* ======== end Apartment-2 ========= */
+
+/* ========  start tag ========= */
+
+#tag-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.flex-1,
+.flex-2 {
+  /* border: 1px solid red; */
+  width: 80%;
+}
+
+.flex-1,
+.flex-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 25px;
+  padding: 5px 10px;
+}
+
+#tag-part .flex-1 p {
+  border: 0px;
+  padding: 5px;
+  background: gray;
+}
+
+#tag-part .flex-2 p {
+  border: 0px;
+  padding: 3px;
+  background: gray;
+}
+/* tag's media query is pending we have to work on it in 768 and 500 max screen  */
+
+/* after the this media query we have to work on the post's section with media query */
+
+/* ======== end tag ========= */
