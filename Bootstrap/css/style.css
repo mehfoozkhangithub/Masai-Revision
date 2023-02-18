@@ -1,0 +1,59 @@
+/* this is font family we give a link */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* ======== utility ======= */
+
+body {
+  line-height: 1.8;
+  color: #899fa1;
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #112458;
+}
+
+a {
+  font-weight: 700;
+  transition: all 0.4s ease; /* this is means the effect of element show on web page in animation way*/
+}
+
+img {
+  width: 100%;
+}
+
+small {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.navbar .nav-link {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #e93b81;
+}
+/* this we wrap over the 16:08 on youtube  link below  */
+/* https://www.youtube.com/watch?v=s9r8dN0157U */

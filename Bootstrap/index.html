@@ -4,20 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- ========= BOOTSTRAP LINKS ========= -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
+    <!-- ====== Bootstrap link ====== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bootstraps Project Practice</title>
   </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+  <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- this attributes in body was linking the pages by click in nav option "scroll-spy" the property name found on bootstrap-->
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container">
+        <a class="navbar-brand" href="#">Mehfooz Khan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- ul start -->
+          <ul class="navbar-nav ms-auto">
+            <!-- the ms-auto use for margin auto  -->
+            <!--  li start  -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#services"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#porfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#features"
+                >Features</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#teams"
+                >Teams</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#testomonials"
+                >Testimonials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contact"
+                >contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!--  section start-->
+
+    <section id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1>WE ARE CREATING AGENCY, CREATIVE PEOPLE</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam
+              autem voluptatibus officiis ea alias dolore facilis laborum
+              aliquid adipisci!
+            </p>
+            <a href="#" class="btn btn-brand">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  section end-->
+
+    <!--  this is the bundle file link in js   -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
