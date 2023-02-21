@@ -8,6 +8,7 @@ body {
   line-height: 1.8;
   color: #899fa1;
   font-size: 15px;
+  font-family: "lato", sans-serif;
 }
 
 h1,
@@ -42,8 +43,21 @@ section {
   padding-bottom: 100px;
 }
 
+.title-sm {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* ======== utility ======= */
+
 .navbar {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.logo-text {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #112458 !important ;
 }
 
 .navbar .nav-link {
@@ -52,8 +66,108 @@ section {
   letter-spacing: 1px;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
+.navbar .navbar-nav .nav-link.active {
   color: #e93b81;
 }
+
+/* ===========  design the hero sections =========== */
+
+#home {
+  background: linear-gradient(rgba(17, 36, 90, 0.8), rgba(17, 36, 90, 0.8)),
+    url("../img/hero_img.jpg");
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+#home h1 {
+  font-weight: 700;
+}
+
+#home p {
+  max-width: 550px;
+  margin: 18px auto;
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn-brand {
+  background-color: #e93b81;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 0;
+}
+
+.btn-brand:hover {
+  background-color: #c6326d;
+  color: #fff;
+}
+
+/* start this is our services sections  */
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hrline {
+  width: 120px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 16px auto 0 auto;
+}
+
+.icon-div {
+  width: 60px;
+  height: 60px;
+  background-color: #e93b81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* end this is our services sections  */
+
+/* start portfolio section  */
+
+.portfolio-item {
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-item img,
+.portfolio-item .portfolio-overlay {
+  transition: all 0.4s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+  opacity: 0;
+}
+
+.portfolio-overlay h3,
+.portfolio-overlay h6 {
+  color: #fff;
+}
+
+/* end portfolio section  */
+
 /* this we wrap over the 16:08 on youtube  link below  */
 /* https://www.youtube.com/watch?v=s9r8dN0157U */
