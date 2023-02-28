@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======= grid prop using ===== */
+
+div .main-txt {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.container {
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 39px;
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.container .cont-1 {
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ffff;
+}
+
+.container .cont-1 h1 {
+  background-color: bisque;
+  border-radius: 60%;
+  margin-bottom: 15px;
+}
+
+.container .cont-1 p {
+  width: 80%;
+  margin: auto;
+}

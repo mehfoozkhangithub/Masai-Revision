@@ -141,7 +141,7 @@ section {
 /* start portfolio section  */
 
 .portfolio-item {
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -160,11 +160,16 @@ section {
   align-items: flex-end;
   padding: 30px;
   opacity: 0;
+  background-color: rgba(17, 36, 90, 0.8);
 }
 
 .portfolio-overlay h3,
 .portfolio-overlay h6 {
   color: #fff;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
 }
 
 /* end portfolio section  */
