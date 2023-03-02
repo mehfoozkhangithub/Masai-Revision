@@ -40,6 +40,11 @@
         useSelector is react-redux hook
         and the main work for Selector is to fetch the data from redux to give to react
 
+- what is useSelector?
+
+        fetch data from redux to react js
+        we can use the useSelector
+
 # Bounce Point
 
 1. the flow of the redux :- first reducer take data from action and place in store file

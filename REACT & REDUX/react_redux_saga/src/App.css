@@ -14,6 +14,36 @@
   background-position: center;
 }
 
+/* header style start */
+
+.header {
+  background-color: orange;
+  height: 100px;
+}
+.cart-div {
+  float: right;
+  margin: 25px;
+  position: relative;
+}
+.cart-div img {
+  width: 30px;
+}
+
+.cart-div div {
+  position: absolute;
+  z-index: 5;
+  background-color: green;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  color: #fff;
+  top: -10px;
+  right: 0;
+  text-align: center;
+}
+
+/* header style end */
+
 form {
   background-color: #ffff;
   padding: 0px 60px;
