@@ -1,10 +1,9 @@
 // here we are create the store
 import { createStore } from "redux";
+import rootReducer from "./rootReducer";
 
-const dummyReducer = () => {
-  return 100;
-};
-
-const store = createStore(dummyReducer);
+const store = createStore(rootReducer);
 
 export default store;
+
+// this is our store we have take the value from rootReducer
