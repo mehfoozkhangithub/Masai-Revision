@@ -1,11 +1,14 @@
+//todo:-    here we are selecting  all the  input come form user   //
 const form = document.querySelector("#otp-form");
 const inputs = document.querySelectorAll(".otp-input");
 const verifyBtn = document.querySelector("#verify-btn");
 
+//?  this function handle the all input value input in array  //
 const isAllInputFilled = () => {
   return Array.from(inputs).every((inputs) => inputs.value);
 };
 
+// ? this is function is getting the otp form "isAllInputFilled" this function give and return the text //
 const getOtpText = () => {
   let text = "";
   inputs.forEach((input) => {
@@ -14,6 +17,7 @@ const getOtpText = () => {
   return text;
 };
 
+// ? this function checking where the otp is there or not if the have then alert the OTP //
 const verifyOTP = () => {
   if (isAllInputFilled()) {
     const OTP = getOtpText();
@@ -21,6 +25,7 @@ const verifyOTP = () => {
   }
 };
 
+// ?  this function is checking for my text is present and if that present it will append in html some class name filled  to change the color of done element //
 const toggleFilledClass = (field) => {
   if (field.value) {
     field.classList.add("filled");
@@ -29,6 +34,7 @@ const toggleFilledClass = (field) => {
   }
 };
 
+// ? this function is for handling the after user will filled the input we focus on new input box //
 form.addEventListener("input", (e) => {
   const target = e.target;
   const value = target.value;
@@ -39,9 +45,11 @@ form.addEventListener("input", (e) => {
   verifyOTP();
 });
 
+// ? this is for input coming and we are handling the event as paste and backspace //
 inputs.forEach((input, currentIndex) => {
   toggleFilledClass(input);
-  // pats event
+
+  //! pats event
   input.addEventListener("paste", (e) => {
     e.preventDefault();
     const text = e.clipboardData.getData("text");
@@ -55,7 +63,7 @@ inputs.forEach((input, currentIndex) => {
     });
   });
 
-  //   backspace event
+  //*   backspace event
   input.addEventListener("keydown", (e) => {
     if (e.keyCode === 8) {
       e.preventDefault();
