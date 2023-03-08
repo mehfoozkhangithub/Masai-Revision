@@ -201,3 +201,15 @@ input {
   font-size: medium;
   text-transform: capitalize;
 }
+.input-filed-btn {
+  margin: auto;
+}
+.input-filed-btn button {
+  padding: 10px 10px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ff2c7d;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
