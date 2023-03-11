@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>leave Request Page</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="./dashbord.html">Dashboard</a>
+      <a href="./status.html">Status</a>
+    </nav>
+    <div class="container">
+      <form id="form_1">
+        <label>Name</label>
+        <input type="text" id="name" maxlength="4" required />
+
+        <label>Reason For Leave </label>
+        <input type="text" id="leaveResion" required />
+
+        <label>Designation</label>
+        <select id="select_desig" value="">
+          <option value=""></option>
+          <option value="employee">Employee</option>
+          <option value="student">Student</option>
+        </select>
+
+        <label>Leave Start Date</label>
+        <input type="date" id="start_date" required />
+
+        <label>Leave end Date</label>
+        <input type="date" id="end_date" required />
+
+        <label>Position</label>
+        <select id="position" value="">
+          <option value=""></option>
+          <option value="hr">HR</option>
+          <option value="ec">EC</option>
+          <option value="manager">Manager</option>
+        </select>
+
+        <button type="submit">Apply</button>
+      </form>
+    </div>
+  </body>
+</html>
+<script src="./js/index.js"></script>

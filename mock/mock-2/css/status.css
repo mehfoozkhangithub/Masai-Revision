@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 2rem;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+}
+body {
+  background-color: antiquewhite;
+}
+
+table,
+td,
+th {
+  border: 1px solid #add;
+  text-align: left;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+th,
+td {
+  padding: 15px;
+}
+
+tr > th {
+  background-color: teal;
+  color: white;
+}
