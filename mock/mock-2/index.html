@@ -41,9 +41,14 @@
           <option value="manager">Manager</option>
         </select>
 
-        <button type="submit">Apply</button>
+        <button type="submit" onclick="myFunc()">Apply</button>
       </form>
     </div>
   </body>
 </html>
 <script src="./js/index.js"></script>
+<script>
+  const myFunc = () => {
+    window.location.href = "modal.html";
+  };
+</script>
