@@ -5,7 +5,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Inter;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
 }
+
 p {
   text-transform: capitalize;
 }

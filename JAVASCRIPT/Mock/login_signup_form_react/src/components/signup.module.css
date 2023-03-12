@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&family=Josefin+Sans:wght@400;500;600;700&family=Montserrat:wght@700&family=Poppins:wght@100;200;300&family=Tilt+Neon&family=Tilt+Warp&display=swap");
+
+.err {
+  color: red;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+
+.form input {
+  width: 500px;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.form input:focus {
+  outline: none !important;
+  border-color: #12f53f9f;
+  box-shadow: 0 0 10px #26e7537f;
+}
+
+.form button {
+  width: 50%;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: gray;
+  color: #fff;
+}
+
+.form button:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #0b75e7bb;
+}
