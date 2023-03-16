@@ -56,12 +56,14 @@
     <!-- ====== here we have the header section end ====== -->
 
     <form
+      id="form"
       class="row form-style d-flex flex-column justify-content-center align-items-center g-3 pt-2"
     >
       <h1 class="text-uppercase text-center text-black">Cars Details</h1>
 
       <div class="col-9">
         <select
+          id="brand_of_car"
           class="form-select form-select-sm"
           aria-label=".form-select-sm "
         >
@@ -74,6 +76,7 @@
 
       <div class="col-9">
         <select
+          id="manual_or_automatic"
           class="form-select form-select-sm"
           aria-label=".form-select-sm "
         >
@@ -86,6 +89,7 @@
 
       <div class="col-9">
         <select
+          id="year"
           class="form-select form-select-sm"
           aria-label=".form-select-sm "
         >
@@ -101,14 +105,14 @@
 
       <div class="col-9 d-flex flex-column justify-content-start g-3">
         <label>KM Drive</label>
-        <input type="text" placeholder="Enter Kilometer Drive" />
+        <input type="text" placeholder="Enter Kilometer Drive" id="kilometer" />
       </div>
 
       <div class="col-9 d-flex flex-column justify-content-start g-3">
         <label>Description</label>
         <textarea
           class="form-control"
-          id="FormControlTextarea1"
+          id="description"
           placeholder="Enter Description"
           rows="4"
         ></textarea>
@@ -116,10 +120,10 @@
 
       <div class="col-9 d-flex flex-column justify-content-start g-3">
         <label>Price</label>
-        <input type="text" placeholder="Enter Price" />
+        <input type="text" placeholder="Enter Price" id="price" />
       </div>
       <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button">Button</button>
+        <input class="btn btn-primary" type="submit" value="button" />
       </div>
     </form>
 

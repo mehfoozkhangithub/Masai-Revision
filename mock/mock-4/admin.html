@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body id="admin">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./hotel.html">Hotel</a>
+      <a href="./login.html">Login</a>
+    </nav>
+
+    <form id="form">
+      <h1>Admin</h1>
+      <p>Category</p>
+      <select id="category">
+        <option value=""></option>
+        <option value="family">Family</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="suite">Suite</option>
+      </select>
+      <p>Image of room</p>
+      <input type="text" id="img" />
+      <p>Type of room</p>
+      <select id="type">
+        <option type="radio" value=""></option>
+        <option type="radio" value="ac">AC</option>
+        <option type="radio" value="non_ac">NON-AC</option>
+      </select>
+
+      <p>Bed Type</p>
+      <select id="bed_type">
+        <option value=""></option>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+      </select>
+
+      <p>No of Adult</p>
+      <input type="text" id="no_of_adult" />
+
+      <p>Max capacity</p>
+      <input type="text" id="max_capacity" />
+
+      <p>Cost per night in Rs</p>
+      <input type="text" id="cost" />
+
+      <p>Boolean</p>
+      <select id="boolean">
+        <option value="false">False</option>
+        <option value="true">True</option>
+      </select>
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
+
+<script>
+  let form = document.querySelector("#form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    let object = {
+      category: form.category.value,
+      image: form.img.value,
+      type: form.type.value,
+      bed_type: form.bed_type.value,
+      no_of_adult: form.no_of_adult.value,
+      max_capacity: form.max_capacity.value,
+      cost: form.cost.value,
+      boolean: JSON.parse(form.boolean.value),
+    };
+    let respond = await fetch(`https://live-api.onrender.com/admin`, {
+      method: "POST",
+      body: JSON.stringify(object),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    window.location.reload();
+    alert("Data was added successfully in Admin...");
+    window.location.href = "adminTable.html";
+  });
+</script>

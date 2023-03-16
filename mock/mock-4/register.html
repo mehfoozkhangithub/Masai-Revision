@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body id="login">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./hotel.html">Hotel</a>
+      <a href="./admin.html">Admin</a>
+      <a href="./login.html">Register</a>
+    </nav>
+    <div class="container">
+      <div class="tab">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <form id="form">
+
+        <input type="text" id="name" placeholder="Enter the name" />
+        <input type="email" id="email" placeholder="Enter the Email" />
+        <input type="password" id="password" placeholder="enter the password" />
+        <input type="password" id="re_password" placeholder="enter the re-password" />
+        <input type="submit" value="submit" />
+      </form>
+  </body>
+</html>
+<script>
+  let form = document.querySelector("#form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    let object = {
+      
+      name:form.name.value,
+      email: form.email.value,
+      password: form.password.value,
+      re_password:form.re_password.value,
+    };
+    let respond = await fetch(`https://live-api.onrender.com/user`, {
+      method: "POST",
+      body: JSON.stringify(object),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    alert("Data was added successfully...");
+    window.location.href="login.html";
+  });
+</script>
+
+

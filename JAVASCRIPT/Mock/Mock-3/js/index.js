@@ -1,9 +1,13 @@
-document.querySelector("form").addEventListener("submit", myFun);
+let form = document.getElementById("form");
 
-let obj;
-
-const myFun = () => {};
-
-// ! integration part is pending we have to work on that
-
-//*  work as been pending
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let object = {
+    brandOfCar: document.getElementById("brand_of_car").value,
+    manual_or_automatic: document.getElementById("manual_or_automatic").value,
+    year: document.getElementById("year").value,
+    kilometer: document.getElementById("kilometer").value,
+    description: document.getElementById("description").value,
+    price: document.getElementById("price"),
+  };
+});

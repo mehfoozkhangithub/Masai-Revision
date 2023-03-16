@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body id="login">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./hotel.html">Hotel</a>
+      <a href="./admin.html">Admin</a>
+      <a href="./login.html">Login</a>
+    </nav>
+    <div class="container">
+      <div class="tab">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+      <form id="form">
+        <input type="email" id="email" placeholder="Enter the Email" />
+        <input type="password" id="password" placeholder="enter the password" />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  let form = document.querySelector("#form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    let object = {
+      email: form.email.value,
+      password: form.password.value,
+    };
+
+    if (
+      object.email === "eve.holt@reqres.in" &&
+      object.password === "cityslicka"
+    ) {
+      fetch("https://reqres.in/api/login", {
+        method: "POST",
+        body: JSON.stringify(object),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (res) {
+          if (res.token) {
+            alert("login successful to admin");
+            window.location.href = "admin.html";
+          }
+        })
+        .catch(function (err) {
+          alert("login failed");
+          console.log(err);
+        });
+    } else {
+      fetch("https://live-api.onrender.com/user")
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (res) {
+          console.log("this is res console", res);
+          let flag = false;
+          let data = res;
+          data.forEach(function (el) {
+            console.log("this is el console", el);
+            if (el.email === object.email && el.password === object.password) {
+              flag = true;
+              return;
+            }
+          });
+          if (flag) {
+            alert("login successful user");
+            window.location.href = "index.html";
+          } else {
+            alert("login failed");
+          }
+        })
+        .catch(function (err) {
+          alert("login failed");
+          console.log(err);
+        });
+    }
+
+    // let respond = await fetch(`https://live-api.onrender.com/user`, {
+    //   method: "GET",
+    //   body: JSON.stringify(object),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    // window.location.reload();
+    // alert("Data was added successfully...");
+  });
+</script>
+
+<!-- 
+
+
+<script>
+      function login(){
+      let email=document.getElementById("email").value
+      let password=document.getElementById("password").value
+
+      let obj={email,password}
+
+      if(obj.email==="eve.holt@reqres.in" && obj.password==="cityslicka"){
+        fetch("https://reqres.in/api/login",{
+            method:"POST",
+            body:JSON.stringify(obj),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        }).then(function(res){
+            return res.json();
+        }).then(function(res){
+            if(res.token){
+                alert("login successfull")
+                window.location.href="admin.html"
+            }
+        }).catch(function(err){
+            alert("login failed")
+            console.log(err)
+        })
+      }else{
+         fetch("https://json-library.onrender.com/users").then(function(res){
+            return res.json();
+        }).then(function(res){
+            console.log(res)
+            let flag=false;
+            let data=res
+            data.forEach(function(el){
+                if(el.email===email && el.password===password){
+                    flag=true;
+                    return
+                }
+            })
+            if(flag){
+                alert("login successfull")
+            }else{
+                alert("login failed")
+            }
+        }).catch(function(err){
+            alert("login failed")
+            console.log(err)
+        })
+      }
+    }
+</script>
+
+
+
+ -->

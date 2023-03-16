@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&family=Josefin+Sans:wght@400;500;600;700&family=Montserrat:wght@700&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Sono:wght@300;400;500;700;800&family=Tilt+Neon&family=Tilt+Warp&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+  font-family: Roboto;
+}
+
+:root {
+  --primary_color: #434343;
+  --secondary_color: #5297d7;
+  --text_color: #fff;
+}
+
+nav {
+  padding: 2rem;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  font-size: 22px;
+  color: #000;
+}
+#login .container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  padding: 20px;
+}
+#login .container .tab {
+  /* border: 1px solid green; */
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 7px 10px;
+  /* here we have to give active bg color */
+  /* background-color: var(--primary_color); */
+  border-radius: 2px;
+}
+#login .container .tab a {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+#login form {
+  /* border: 1px solid yellow; */
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  background-color: var(--primary_color);
+  color: var(--text_color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 2px;
+}
+
+#login form input {
+  width: 85%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#login form ::placeholder {
+  color: gray;
+  font-size: medium;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+#login form :last-child {
+  width: 50%;
+  text-transform: capitalize;
+  font-size: medium;
+  padding: 5px 10px;
+  background-color: var(--secondary_color);
+  color: var(--text_color);
+}
+
+#admin form {
+  padding: 30px;
+  border: 1px solid red;
+  background-color: var(--primary_color);
+  height: fit-content;
+  width: 80%;
+  margin: auto;
+}
+
+#admin form input,
+select {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: gray;
+}
+
+#admin p {
+  font-size: large;
+  font-weight: 500;
+  color: var(--text_color);
+  padding: 10px 0;
+}
+#admin h1 {
+  color: var(--secondary_color);
+}
+
+#admin input:last-child {
+  margin-top: 20px;
+  width: 50%;
+  text-transform: capitalize;
+  font-size: medium;
+  padding: 5px 10px;
+  background-color: var(--secondary_color);
+  color: var(--text_color);
+}
+#admin input,
+section {
+  margin: auto;
+}
+
+#home h1,
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+#hotel .mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#hotel .mainDiv .cardDiv p {
+  text-align: start !important ;
+  margin: auto;
+}
+#hotel .mainDiv button {
+  padding: 20px;
+  width: 89%;
+  background-color: var(--secondary_color);
+  border-radius: 5px;
+  margin-top: 20px;
+  color: var(--text_color);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+}
+
+#hotel h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: xx-large;
+  font-weight: bolder;
+  font-family: Inter;
+}

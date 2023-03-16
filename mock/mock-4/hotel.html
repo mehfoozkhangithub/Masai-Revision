@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mock 4</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body id="hotel">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./admin.html">Admin</a>
+    </nav>
+    <h1 id="data"></h1>
+  </body>
+</html>
+<script>
+  const getImgData = () => {
+    fetch(`https://live-api.onrender.com/admin`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
+        appendData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  getImgData();
+
+  const appendData = (data) => {
+    let main = document.querySelector("#data");
+
+    // ! this is main div and all those div  append here
+    let mainDiv = document.createElement("div");
+    mainDiv.setAttribute("class", "mainDiv");
+
+    // this is image append here
+    let imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "imgDiv");
+
+    // this is all detail append here
+    let cardDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "cardDiv");
+
+    data.forEach((ele) => {
+      let img = document.createElement("img");
+      img.setAttribute("class", "img");
+      img.src = ele.image;
+
+      imgDiv.append(img);
+
+      let name = document.createElement("h3");
+      name.setAttribute("class", "nameHead");
+      name.innerText = ele.category;
+      name.style.color = "#5297d7";
+
+      let adult = document.createElement("p");
+      adult.innerText = "Adult :     " + ele.no_of_adult;
+      adult.style.color = "#c58464";
+
+      let capacity = document.createElement("p");
+      capacity.innerText =
+        "Capacity :     " + "Max Capacity" + ele.max_capacity;
+      capacity.style.color = "#c58464";
+
+      let facility = document.createElement("p");
+      facility.innerText = "Facility :     " + "Closet with hangers, HD TV";
+      facility.style.color = "#c58464";
+
+      let bed = document.createElement("p");
+      bed.innerText = "Bed Type :     " + ele.bed_type;
+      bed.style.color = "#c58464";
+
+      let price = document.createElement("p");
+      price.innerText = "Price :     " + "₹" + ele.cost + "/Night";
+      price.style.color = "#c58464";
+
+      let btn = document.createElement("button");
+      btn.innerText = "Book Now";
+      btn.setAttribute("class", "hotelBtn");
+      btn.addEventListener("click", () => {
+        myFunc(ele);
+      });
+
+      cardDiv.append(name, adult, capacity, facility, bed, price, btn);
+      mainDiv.append(imgDiv, cardDiv);
+      main.append(mainDiv);
+    });
+  };
+
+  const myFunc = (ele) => {
+    alert("Your Order Booked Going to Home Page");
+    window.location.href = "index.html";
+  };
+</script>

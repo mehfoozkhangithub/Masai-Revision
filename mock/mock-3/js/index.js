@@ -20,6 +20,7 @@ const getData = async (page) => {
 };
 
 getData();
+
 let page_w = document.getElementById("page");
 page_w.innerText = page;
 

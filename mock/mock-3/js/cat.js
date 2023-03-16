@@ -1,6 +1,6 @@
 let jaat = JSON.parse(localStorage.getItem("catData")) || "";
 
-let favData = JSON.parse(localStorage.getItem("favrouites")) || [];
+let favData = JSON.parse(localStorage.getItem("favorites")) || [];
 
 let container = document.getElementById("container");
 
@@ -35,7 +35,7 @@ const append = (value) => {
 
     btn.addEventListener("click", () => {
       favData.push(el);
-      localStorage.setItem("favourit", JSON.stringify(favData));
+      localStorage.setItem("favorite", JSON.stringify(favData));
       alert("Add to Favourites");
     });
 

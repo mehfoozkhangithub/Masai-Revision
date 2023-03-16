@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mock 4</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      table {
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      .Btn {
+        padding: 7px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./hotel.html">Hotel</a>
+      <a href="./admin.html">Admin</a>
+    </nav>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Category</th>
+          <th>Image</th>
+
+          <th>Type of room</th>
+          <th>Bed type</th>
+          <th>No of persons</th>
+          <th>Capacity</th>
+          <th>Cost</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="container"></div>
+  </body>
+</html>
+<script>
+  var hotelsData = [];
+  let container = document.querySelector(".container");
+
+  function getData() {
+    container.innerText = "";
+    fetch(`https://live-api.onrender.com/admin`)
+      .then((res) => res.json())
+      .then((res) => {
+        carData = res;
+        append(res);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  getData();
+
+  function append(data) {
+    let tbody = document.querySelector("tbody");
+    tbody.innerHTML = null;
+
+    data.forEach(function (elem) {
+      let tr = document.createElement("tr");
+
+      let td7 = document.createElement("td");
+
+      td7.innerText = elem.id;
+
+      let td1 = document.createElement("td");
+
+      td1.innerText = elem.category;
+
+      let img = document.createElement("img");
+      img.src = elem.image;
+      img.style.width = "200px";
+
+      let td2 = document.createElement("td");
+      td2.innerText = elem.type;
+
+      let td3 = document.createElement("td");
+
+      td3.innerText = elem.bed_type;
+
+      let td4 = document.createElement("td");
+
+      td4.innerText = elem.no_of_adult;
+
+      let td6 = document.createElement("td");
+      td6.innerText = elem.max_capacity;
+
+      let td5 = document.createElement("td");
+
+      td5.innerText = elem.cost;
+
+      let btn_1 = document.createElement("button");
+
+      btn_1.innerText = "Edit";
+      btn_1.style.backgroundColor = "teal";
+      btn_1.setAttribute("class", "Btn");
+
+      btn_1.addEventListener("click", function () {
+        edit(elem);
+      });
+
+      let btn_2 = document.createElement("button");
+
+      btn_2.innerText = "Delete";
+      btn_2.style.backgroundColor = "red";
+      btn_2.setAttribute("class", "Btn");
+
+      btn_2.addEventListener("click", function () {
+        deleteData(elem);
+      });
+
+      tr.append(td7, td1, img, td2, td3, td4, td6, td5, btn_1, btn_2);
+      document.querySelector("tbody").append(tr);
+    });
+  }
+  function deleteData(el) {
+    let id = el.id;
+    fetch(`https://live-api.onrender.com/admin/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        // getData(res)
+        append(res);
+        window.location.reload();
+      })
+      .catch((err) => console.log(err));
+  }
+</script>
