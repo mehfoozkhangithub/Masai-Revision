@@ -1,0 +1,112 @@
+{
+    "roadster-men": [
+        {
+            "id": 1,
+            "brand": "roadster",
+            "title": "cotton Checked Casual Shirt",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 844
+        },
+        {
+            "id": 8,
+            "brand": "roadster",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 599
+        }
+    ],
+    "roadster-twills-men": [
+        {
+            "id": 1,
+            "brand": "roadster",
+            "title": "cotton Checked Casual Shirt",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 844
+        },
+        {
+            "id": 8,
+            "brand": "roadster",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 599
+        },
+        {
+            "id": 9,
+            "brand": "twills",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 799
+        },
+        {
+            "id": 10,
+            "brand": "twills",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 1099
+        },
+        {
+            "id": 11,
+            "brand": "twills",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 1450
+        },
+        {
+            "id": 12,
+            "brand": "twills",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 2700
+        }
+    ],
+    "price": [
+        {
+            "id": 1,
+            "brand": "roadster",
+            "title": "cotton Checked Casual Shirt",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 844
+        },
+        {
+            "id": 2,
+            "brand": "blackberrys",
+            "title": "Regukar Fit Printed Shirt",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 699
+        },
+        {
+            "id": 6,
+            "brand": "allen-solly",
+            "title": "Checked Regular Fit Printed Shirt",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 999
+        },
+        {
+            "id": 8,
+            "brand": "roadster",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 599
+        },
+        {
+            "id": 9,
+            "brand": "twills",
+            "title": "Men Linen Regular Fit",
+            "image": "https://picsum.photos/200",
+            "category": "men",
+            "price": 799
+        }
+    ]
+}

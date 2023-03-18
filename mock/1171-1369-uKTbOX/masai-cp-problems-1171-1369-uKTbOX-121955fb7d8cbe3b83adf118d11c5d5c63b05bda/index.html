@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All CSS For Home Page Goes Here  */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        background-color: bisque;
+      }
+      a {
+        font-weight: 600;
+        font-size: medium;
+
+        color: black;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid red;
+        width: 100%;
+      }
+
+      #filter {
+        border: 1px solid green;
+        /* width: 35%; */
+        padding: 20px;
+        height: 100%;
+      }
+
+      .filter h2,
+      input,
+      p {
+        padding: 10px;
+        display: block;
+      }
+      #product-container .card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 5px;
+      }
+      .addBtn {
+        width: 50%;
+        padding: 10px;
+      }
+      .addBtn:disabled .addBtn[disabled] {
+        color: #ffffff;
+        background-color: #00aacc;
+        border: 1px solid #0099cc;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Web E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <h1 id="alert"></h1>
+    <main>
+      <div id="filter">
+        <div id="brand-filter">
+          <h2>Filter By Brands</h2>
+          <div>
+            <input type="checkbox" id="roadster" />
+            <p>Roadster</p>
+          </div>
+          <div>
+            <input type="checkbox" id="blackberrys" />
+            <p>Blackberrys</p>
+          </div>
+          <div>
+            <input type="checkbox" id="van-heusen" />
+            <p>Van Heusen</p>
+          </div>
+          <div>
+            <input type="checkbox" id="allen-solly" />
+            <p>Allen Solly</p>
+          </div>
+          <div>
+            <input type="checkbox" id="twills" />
+            <p>Twills</p>
+          </div>
+        </div>
+        <div id="category-filter">
+          <h2>Filter By Categories</h2>
+          <div>
+            <input type="checkbox" id="men" />
+            <p>Men</p>
+          </div>
+          <div>
+            <input type="checkbox" id="women" />
+            <p>Women</p>
+          </div>
+          <div>
+            <input type="checkbox" id="homedecor" />
+            <p>Homedecor</p>
+          </div>
+          <div>
+            <input type="checkbox" id="kids" />
+            <p>Kids</p>
+          </div>
+        </div>
+      </div>
+      <div id="product-container">
+        <div>
+          <!-- Here Append All the Products  -->
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module">
+    // All Your Script for Home Page Goes Here
+    const getImgData = () => {
+      fetch(
+        `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products`
+      )
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          console.log(res.data);
+          appendData(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getImgData();
+    let btn;
+
+    const appendData = (data) => {
+      let mainContainer = document.getElementById("product-container");
+      mainContainer.innerHTML = "";
+      let div1 = document.createElement("div");
+      div1.setAttribute("class", "card");
+
+      data.map((el, i) => {
+        let img = document.createElement("img");
+        img.src = el.image;
+
+        let title = document.createElement("h3");
+        title.innerText = el.title;
+
+        let brand = document.createElement("p");
+        brand.innerText = el.brand;
+
+        let category = document.createElement("p");
+        category.innerText = el.category;
+
+        let price = document.createElement("p");
+        price.innerText = el.price;
+
+        btn = document.createElement("button");
+        btn.innerText = "Add to cart";
+        btn.setAttribute("class", "addBtn");
+        btn.addEventListener("click", () => {
+          myFunc(el.id, i);
+        });
+
+        let div = document.createElement("div");
+        div.setAttribute("class", "main_card");
+        div.append(img, name, title, brand, category, price, btn);
+        div1.append(div);
+        mainContainer.append(div1);
+      });
+    };
+    let dataOfArr = [];
+
+    const myFunc = (el, i) => {
+      if (i) {
+        btn.setAttribute("disabled", true);
+      }
+      dataOfArr.push(el);
+      localStorage.setItem("cart", JSON.stringify(dataOfArr));
+    };
+  </script>
+</html>
