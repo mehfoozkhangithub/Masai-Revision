@@ -187,9 +187,6 @@
     let dataOfArr = [];
 
     const myFunc = (el, i) => {
-      if (i) {
-        btn.setAttribute("disabled", true);
-      }
       dataOfArr.push(el);
       localStorage.setItem("cart", JSON.stringify(dataOfArr));
     };

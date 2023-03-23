@@ -1,7 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;900&family=Josefin+Sans:wght@400;500;600;700&family=Montserrat:wght@700&family=Poppins:wght@100;200;300&family=Tilt+Neon&family=Tilt+Warp&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: Inter;
+  background-color: #000;
+  color: #fff;
+}
+
 .err {
   color: red;
+}
+.app {
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .form {
@@ -35,6 +50,15 @@
   border: none;
   background-color: gray;
   color: #fff;
+  cursor: pointer;
+}
+
+.form button:hover {
+  border: 1px solid lime;
+  background-color: rgba(0, 255, 0, 0.756);
+  color: #000;
+  font-size: larger;
+  font-weight: 400;
 }
 
 .form button:focus {

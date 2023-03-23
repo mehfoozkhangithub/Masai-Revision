@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        scroll-behavior: smooth;
+      }
+      body {
+        height: 100vh;
+      }
+
+      #myButton {
+        padding: 7px 50px;
+        color: #000;
+        background: #fff;
+        position: relative;
+        top: 50%;
+        left: 45%;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+      }
+      #myButton:hover {
+        color: greenyellow;
+        background: burlywood;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton">Click me</button>
+  </body>
+</html>
+<script src="throttler.js"></script>

@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>Volantiers</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        background-color: coral;
+      }
+      #navbar div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      a {
+        color: #000;
+      }
+      #create {
+        padding: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #create form {
+        /* border: 1px solid red; */
+        margin-top: 5px;
+        width: 50%;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        padding: 50px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+
+      #create input,
+      select {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #create input,
+      select ::placeholder {
+        font-size: large;
+        font-weight: 400;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #create .btn {
+        width: 50%;
+        margin: auto;
+        padding: 7px;
+        text-align: center;
+        font-size: medium;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: teal;
+        color: #fff;
+      }
+      table {
+        /* border: 1px solid red; */
+        width: 100%;
+      }
+
+      thead tr th {
+        background-color: yellow;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Masai NGO Management</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./donators.html">
+          <h2>Donators</h2>
+        </a>
+        <a href="./volantiers.html">
+          <h2>Volantiers</h2>
+        </a>
+      </div>
+    </div>
+    <select id="filter">
+      <option value="">Select Category</option>
+      <option value="Covid helper fund">Covid helper fund</option>
+      <option value="Orphanage helper fund">Orphanage helper fund</option>
+      <option value="Ukrain war helper fund">Ukrain war helper fund</option>
+      <option value="Old age home helper fund">Old age home helper fund</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone No.</th>
+          <th>Email</th>
+          <th>Category</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script src="./Scripts/volantiers.js"></script>
+</html>
