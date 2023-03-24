@@ -1,9 +1,9 @@
 const getData = () => {
   // calls an API and get the data;
-
   console.log("fetching the data ...");
 };
 
+//  doSomeMagic === debounce both function is same;
 const doSomeMagic = (fu, delay) => {
   let timer;
   return function () {

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Inter:wght@100;400;500;700;900&family=Josefin+Sans:wght@400;500;600;700&family=Montserrat:wght@700&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400;500;700;900&family=Sono:wght@300;400;500;700;800&family=Tilt+Neon&family=Tilt+Warp&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Delicious Handrawn;
+}
+
+h1 {
+  letter-spacing: 1rem;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-form {
+  width: 400px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.input-and-btn {
+  display: flex;
+}
+
+.todo-box {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo-box .content {
+  display: flex;
+}
+
+.todo-box .content p {
+  margin-top: -6px;
+  margin-left: 6px;
+}
+
+.todo-box span {
+  margin: 0 5px;
+}
+
+.delete-all {
+  width: 400px;
+}
+
+.actions-box {
+  cursor: pointer;
+}
+
+.back-btn {
+  margin-top: 5px;
+  width: 100%;
+}
