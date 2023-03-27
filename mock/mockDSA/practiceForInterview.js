@@ -16,26 +16,22 @@
 
 // ******************** //
 
-let value = 19; //YES
+let num1 = 19; //YES
 let num2 = 2; //NO
+// output was 1 and if that match we have to print YES or NO;
 
-let ans = value.toString();
-
-console.log(typeof ans);
-console.log(ans);
-
-// output was 1 and if that match we have to print YES or NO
+while (num1) {}
 
 /* sum = 0;
 
-while (value) {
-  console.log("this is checking value", value);
-  sum += value % 10;
+while (num1) {
+  console.log("this is checking num1", num1);
+  sum += num1 % 10;
   console.log("this is the sum after module operation", sum);
-  value = Math.floor(value / 10);
+  num1 = Math.floor(num1 / 10);
 }
 
-console.log("this for  checking what is in the real time value", value);
+console.log("this for  checking what is in the real time num1", num1);
 console.log(sum);
 */
 
@@ -44,3 +40,22 @@ console.log(sum);
 let arr1 = [1, 2, 0, 4, 5]; // 12
 
 let arr2 = [3, -4.1, 2, -1]; // 3
+
+//! find the contagious sub array;
+
+// *********************** //
+
+let mat = [
+  [0, 0, 0, 0],
+  [1, 1, 1, 1],
+  [2, 2, 2, 2],
+  [3, 3, 3, 3],
+  [4, 4, 4, 4],
+];
+
+/* 
+0 1 2 3 4
+0 1 2 3 4
+0 1 2 3 4
+0 1 2 3 4
+*/

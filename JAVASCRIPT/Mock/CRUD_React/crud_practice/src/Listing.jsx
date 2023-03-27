@@ -7,17 +7,6 @@ export default function Listing() {
   const [data, setData] = React.useState(null);
 
   const getData = async () => {
-    // fetch("http://localhost:8080/employee")
-    //   .then((res) => {
-    //     return res.json();
-    //   })
-    //   .then((res) => {
-    //     setData(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err.message);
-    //   });
-
     try {
       axios
         .get("http://localhost:8080/employee")
