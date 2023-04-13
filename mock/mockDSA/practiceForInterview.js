@@ -14,13 +14,27 @@
 //   console.log(string[i]);
 // }
 
-// ******************** //
+// ******************** //  1 9 -> 1 + 81 = 82 ->64+4=68 -> 36+64=100
 
 let num1 = 19; //YES
 let num2 = 2; //NO
 // output was 1 and if that match we have to print YES or NO;
 
-while (num1) {}
+// while (num1) {}
+// function recursion(){
+
+// }
+function extractDigits(num) {
+  let sum = 0;
+  while (num != 0) {
+    let lastDigit = num % 10;
+    sum += lastDigit;
+    // console.log(lastDigit);
+    num = num / 10;
+  }
+  console.log(sum);
+}
+extractDigits(19);
 
 /* sum = 0;
 

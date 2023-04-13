@@ -1,7 +1,7 @@
 const button = document.querySelector("#myButton");
 button.addEventListener(
   "click",
-  throttler(function () {
+  throttler(() => {
     console.log("Button clicked!");
   }, 1000)
 );
