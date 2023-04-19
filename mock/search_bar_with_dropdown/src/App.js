@@ -19,8 +19,6 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  console.log("this is the useEffect console", dataGet);
-
   return (
     <div className="App">
       <Search placeholder="Search in the input..." data={dataGet} />

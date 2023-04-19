@@ -22,7 +22,7 @@ ul {
 
 .search {
   display: block;
-  margin: auto;
+  margin: 0 auto;
   border: 1px solid gray;
 }
 .search::placeholder {
