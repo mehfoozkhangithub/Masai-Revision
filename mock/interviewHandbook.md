@@ -172,7 +172,7 @@ console.log(ans);
 
       There are many different types of algorithms, each designed to solve specific types of problems. Some common examples of algorithms include sorting algorithms (such as bubble sort and merge sort), search algorithms (such as binary search and linear search), and graph algorithms (such as Dijkstra's algorithm and Kruskal's algorithm).
 
-- Q3.What are data structures ?
+- Q3. What are data structures ?
 
       In computer science, a data structure is a way of organizing and storing data in a computer's memory in a way that allows for efficient access and modification. Data structures provide a way to represent data and the relationships between different pieces of data in a logical and efficient manner. They are essential tools for managing large amounts of data and are used extensively in computer programming, databases, and other areas of computer science.
 
@@ -193,3 +193,134 @@ console.log(ans);
       7. Hash Tables: A data structure that allows for constant-time access to elements using a hash function.
 
       Each data structure has its own strengths and weaknesses, and the choice of data structure often depends on the specific problem being solved and the requirements of the application.
+
+- Q4. Array 2d array object with example ?
+
+`An array is a data structure that stores a collection of elements of the same type in a contiguous block of memory. A 2D array is an array of arrays, where each element in the array is itself an array. An object is a data structure that stores a collection of related data and functions in a single entity.`
+
+Here's an example of a 2D array of integers in Java:
+
+```
+int[][] myArray = new int[3][4];
+```
+
+This creates a 2D array with 3 rows and 4 columns. You can initialize the array with values as follows:
+
+```
+int[][] myArray = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+```
+
+This creates a 2D array with the values:
+
+```
+1 2 3 4
+5 6 7 8
+9 10 11 12
+```
+
+Here's an example of a 2D array of objects in Java:
+
+```
+Person[][] myArray = new Person[2][2];
+```
+
+This creates a 2D array with 2 rows and 2 columns, where each element in the array is a `Person` object. You can initialize the array with objects as follows:
+
+```
+Person person1 = new Person("John", 25);
+Person person2 = new Person("Jane", 30);
+Person person3 = new Person("Bob", 40);
+Person person4 = new Person("Alice", 35);
+
+Person[][] myArray = {{person1, person2}, {person3, person4}};
+```
+
+This creates a 2D array with the `Person` objects:
+
+```
+[John, 25] [Jane, 30]
+[Bob, 40] [Alice, 35]
+```
+
+In this example, each element in the array is a `Person` object, which contains a name and age.
+
+- Q5. Selection sort bubble sort definition and advantages ?
+
+```
+Selection sort and bubble sort are two popular sorting algorithms used in computer science. Both algorithms are simple to understand and implement, but have different performance characteristics and trade-offs.
+
+Selection Sort:
+Selection sort is a sorting algorithm that works by repeatedly finding the smallest element in an unsorted portion of an array and moving it to the front of the array. It does this by iteratively selecting the smallest element in the remaining unsorted portion of the array and swapping it with the first unsorted element. Selection sort has a time complexity of O(n^2), where n is the size of the array being sorted.
+
+Advantages of Selection Sort:
+- Simple and easy to understand and implement.
+- Performs well on small lists or arrays where the overhead of more complex algorithms might outweigh any potential performance benefits.
+- Requires only a constant amount of additional memory space.
+
+Bubble Sort:
+Bubble sort is a sorting algorithm that works by repeatedly swapping adjacent elements in an array if they are in the wrong order. It continues to do this until the entire array is sorted. Bubble sort has a time complexity of O(n^2), where n is the size of the array being sorted.
+
+Advantages of Bubble Sort:
+- Simple and easy to understand and implement.
+- Performs well on small lists or arrays where the overhead of more complex algorithms might outweigh any potential performance benefits.
+- Like selection sort, requires only a constant amount of additional memory space.
+
+Both selection sort and bubble sort are not very efficient algorithms for sorting large arrays or lists, but they are useful in situations where simplicity and ease of implementation are more important than performance. They are also useful as building blocks for more complex sorting algorithms, such as quicksort or mergesort.
+```
+
+- Q6. Stack and queue definition
+  And all operations
+
+```
+Stack and queue are two fundamental data structures in computer science used to organize and manage collections of elements.
+
+Stack:
+A stack is a data structure that stores a collection of elements in a Last-In, First-Out (LIFO) order. It is similar to a stack of plates where the last plate added to the stack is the first one to be removed.
+
+Operations in Stack:
+- Push: Adds an element to the top of the stack.
+- Pop: Removes the top element from the stack and returns it.
+- Peek/Top: Returns the top element from the stack without removing it.
+- Size: Returns the number of elements in the stack.
+- isEmpty: Checks if the stack is empty.
+
+Queue:
+A queue is a data structure that stores a collection of elements in a First-In, First-Out (FIFO) order. It is similar to a line of people waiting for a service where the first person in the line is the first one to be served.
+
+Operations in Queue:
+- Enqueue: Adds an element to the back of the queue.
+- Dequeue: Removes the front element from the queue and returns it.
+- Peek/Front: Returns the front element from the queue without removing it.
+- Size: Returns the number of elements in the queue.
+- isEmpty: Checks if the queue is empty.
+
+Some common applications of stack and queue include parsing expressions, implementing recursive algorithms, and modeling real-world scenarios like a queue of customers waiting in a line.
+
+It's worth noting that both stack and queue can be implemented using an array or a linked list data structure, with different trade-offs between memory usage and time complexity.
+```
+
+- Q7. What is recursion ?
+
+```
+Recursion is a technique in computer programming where a function calls itself in order to solve a problem or perform a task. Recursion allows a function to break down a problem into smaller and simpler subproblems that can be solved in a similar way.
+
+A recursive function typically has a base case and a recursive case. The base case is a condition that is checked at each recursive call and stops the recursion when it is met. The recursive case is the part of the function that calls itself with smaller subproblems until the base case is met.
+
+Here's an example of a simple recursive function to calculate the factorial of a number:
+
+```
+
+int factorial(int n) {
+if (n == 0) { // base case
+return 1;
+} else { // recursive case
+return n \* factorial(n - 1);
+}
+}
+
+```
+
+In this example, the base case is when n is equal to 0, which returns 1. The recursive case multiplies n by the factorial of n - 1 until the base case is met.
+
+Recursion can be a powerful and elegant solution to many programming problems, but it can also be inefficient and use up a lot of memory if not implemented carefully. It's important to consider the potential performance implications of using recursion and to optimize the function as necessary.
+```
