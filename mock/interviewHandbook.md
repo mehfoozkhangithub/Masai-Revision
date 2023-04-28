@@ -151,3 +151,45 @@ console.log(ans);
         * <input> and its related tags such as <button> and <select>
 
         In summary, block-level elements are used to define major sections of the web page, while inline elements are used to format text within a block-level element.
+
+# Interview Question `for hukumu interview`
+
+- Q1.What is space complexity and time complexity?
+
+      Space complexity and time complexity are two important measures of the efficiency of an algorithm in computer science.
+
+       Time complexity refers to the amount of time an algorithm takes to run as a function of the size of its input. It is typically expressed using big-O notation, which provides an upper bound on the worst-case running time of the algorithm. The time complexity of an algorithm is an important factor in determining how scalable it is, and how well it can handle larger inputs.
+
+       Space complexity, on the other hand, refers to the amount of memory an algorithm requires to run as a function of the size of its input. It is also typically expressed using big-O notation, and provides an upper bound on the worst-case space requirements of the algorithm. The space complexity of an algorithm is an important factor in determining how much memory it can use, and how well it can handle larger inputs.
+
+       Both time and space complexity are important considerations when designing and analyzing algorithms, as they can affect the performance and scalability of the algorithm in different ways.
+
+- Q2. What is algorithm ?
+
+      An algorithm is a set of step-by-step instructions that a computer program follows in order to perform a specific task or solve a particular problem. It is a precise and unambiguous sequence of instructions that can be executed by a computer to solve a problem. Algorithms are used in many areas of computer science, including artificial intelligence, computer graphics, cryptography, database systems, and software engineering.
+
+      The main goal of an algorithm is to solve a problem in an efficient and effective manner. This involves breaking down the problem into smaller sub-problems, and developing a series of instructions that can be executed in a logical and systematic way to solve each sub-problem. Algorithms are often analyzed in terms of their time complexity and space complexity, which are measures of the amount of time and memory required to execute the algorithm.
+
+      There are many different types of algorithms, each designed to solve specific types of problems. Some common examples of algorithms include sorting algorithms (such as bubble sort and merge sort), search algorithms (such as binary search and linear search), and graph algorithms (such as Dijkstra's algorithm and Kruskal's algorithm).
+
+- Q3.What are data structures ?
+
+      In computer science, a data structure is a way of organizing and storing data in a computer's memory in a way that allows for efficient access and modification. Data structures provide a way to represent data and the relationships between different pieces of data in a logical and efficient manner. They are essential tools for managing large amounts of data and are used extensively in computer programming, databases, and other areas of computer science.
+
+      There are many different types of data structures, each with its own strengths and weaknesses. Some common data structures include:
+
+      1. Arrays: A collection of elements of the same type, stored in contiguous memory locations.
+
+      2. Linked Lists: A collection of elements, each containing a reference to the next element in the list.
+
+      3. Stacks: A collection of elements that allows for last-in, first-out (LIFO) access.
+
+      4. Queues: A collection of elements that allows for first-in, first-out (FIFO) access.
+
+      5. Trees: A hierarchical data structure that consists of nodes connected by edges, with a single root node at the top.
+
+      6. Graphs: A collection of nodes (also known as vertices) connected by edges.
+
+      7. Hash Tables: A data structure that allows for constant-time access to elements using a hash function.
+
+      Each data structure has its own strengths and weaknesses, and the choice of data structure often depends on the specific problem being solved and the requirements of the application.
