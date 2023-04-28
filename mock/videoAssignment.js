@@ -36,13 +36,13 @@
 
 let happyNumber_1 = 19;
 let happyNumber_2 = 2;
-
 //** this code from rahul side  */
 
 function HappyNumber(N) {
-  let num = N;
-  let obj = {};
+  // 19
+  let obj = {}; // ! checking
   while (N != 1) {
+    // * condition for checking
     if (!obj[N]) obj[N] = 1;
     else {
       console.log("No");
@@ -51,6 +51,7 @@ function HappyNumber(N) {
     N = square(N);
   }
   console.log("Yes");
+  console.log("this is object", obj);
 }
 function square(n) {
   let x;
@@ -63,7 +64,7 @@ function square(n) {
   return val;
 }
 
-HappyNumber(happyNumber_2);
+HappyNumber(happyNumber_1);
 
 //** this code from ali side  */
 
@@ -134,12 +135,12 @@ sample output
 
 */
 
-let arr = [3, -4, 1, 2, -1];
-// let arr = [1, 2, 0, 4, 5];
+// let arr = [3, -4, 1, 2, -1];
+let arr = [1, 2, 0, 4, 5];
 
 //* function to find maximum sum of contiguous subarray
 function findMaxSumSubarray(arr) {
-  let maxSoFar = 0;
+  let maxSoFar = 0; // [1, 2, 0, 4, 5]
   let maxEndingHere = 0;
   for (let i = 0; i < arr.length; i++) {
     maxEndingHere += arr[i];
@@ -154,6 +155,98 @@ function findMaxSumSubarray(arr) {
   }
   return maxSoFar;
 }
+findMaxSumSubarray(arr);
+// ? This is the question factorial ?
 
-let ans = findMaxSumSubarray(arr);
-console.log(ans);
+function factorial(n) {
+  if (n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
+
+// ? This is the question Balance parenthesis ?
+
+let str = "{(})][";
+
+let str1 = "[{()}]";
+
+function myFunction(str) {
+  let flag = true;
+  let stack = [];
+  for (let i = 0; i < str.length; i++) {
+    if (stack.length !== 0 && stack[stack.length - 1] == str[i]) {
+      stack.pop();
+    } else {
+      if (str[i] == "[") {
+        stack.push("]");
+      } else if (str[i] == "(") {
+        stack.push(")");
+      } else if (str[i] == "{") {
+        stack.push("}");
+      } else if (str[i] == ")" || str[i] == "}" || str[i] == "]") {
+        flag = false;
+      }
+    }
+  }
+  if (stack.length == 0 && flag) {
+    console.log("balanced");
+  } else {
+    console.log("unbalanced");
+  }
+}
+
+myFunction(str1);
+
+// ? This is question Zero to end ?
+
+let nums = [2, 0, 1, 0, 3];
+
+let count = 0;
+for (var i = 0; i < nums.length; i++) {
+  if (nums[i] != 0) {
+    nums[count] = nums[i];
+    count++;
+  }
+}
+while (count < nums.length) {
+  nums[count] = 0;
+  count++;
+}
+return console.log(nums);
+
+function convertToRoman(num) {
+  const romanNumeralTable = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1,
+  };
+
+  let romanNumeral = "";
+
+  for (let key in romanNumeralTable) {
+    while (num >= romanNumeralTable[key]) {
+      romanNumeral += key;
+      num -= romanNumeralTable[key];
+    }
+  }
+
+  return romanNumeral;
+}
+
+console.log(convertToRoman(4)); // Output: "IV"
+console.log(convertToRoman(9)); // Output: "IX"
+console.log(convertToRoman(14)); // Output: "XIV"
+console.log(convertToRoman(3999)); // Output: "MMMCMXCIX"
