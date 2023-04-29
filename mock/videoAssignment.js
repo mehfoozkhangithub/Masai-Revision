@@ -56,11 +56,17 @@ function HappyNumber(N) {
 function square(n) {
   let x;
   let val = 0;
+
   while (n > 0) {
     x = n % 10;
+    // console.log("this is inside while loop x", x);
     val += x * x;
+    // console.log("this is inside while loop val", val);
     n = Math.floor(n / 10);
+    // console.log("this is inside while loop n", n);
   }
+  // console.log("this is happy number x value : ", x);
+  // console.log("this is the value of val of happy number : ", val);
   return val;
 }
 
@@ -110,7 +116,7 @@ for (let i = 0; i < colum; i++) {
   for (let j = 0; j < row; j++) {
     bag += matrix[j][i] + " ";
   }
-  console.log(bag);
+  // console.log(bag);
 }
 
 //* END of Traversal Matrix
@@ -144,8 +150,8 @@ function findMaxSumSubarray(arr) {
   let maxEndingHere = 0;
   for (let i = 0; i < arr.length; i++) {
     maxEndingHere += arr[i];
-    console.log("this is the ending wala console", maxEndingHere);
-    console.log("this is the maxSofar wala console", maxSoFar);
+    // console.log("this is the ending wala console", maxEndingHere);
+    // console.log("this is the maxSofar wala console", maxSoFar);
     if (maxEndingHere < 0) {
       maxEndingHere = 0;
     }
@@ -165,7 +171,7 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
 // ? This is the question Balance parenthesis ?
 
@@ -198,7 +204,7 @@ function myFunction(str) {
   }
 }
 
-myFunction(str1);
+// myFunction(str1);
 
 // ? This is question Zero to end ?
 
@@ -215,7 +221,9 @@ while (count < nums.length) {
   nums[count] = 0;
   count++;
 }
-return console.log(nums);
+// return console.log(nums);
+
+// ? this is the question of the conversion of the number to Roman-Number
 
 function convertToRoman(num) {
   const romanNumeralTable = {
@@ -242,11 +250,10 @@ function convertToRoman(num) {
       num -= romanNumeralTable[key];
     }
   }
-
   return romanNumeral;
 }
 
-console.log(convertToRoman(4)); // Output: "IV"
-console.log(convertToRoman(9)); // Output: "IX"
-console.log(convertToRoman(14)); // Output: "XIV"
-console.log(convertToRoman(3999)); // Output: "MMMCMXCIX"
+// console.log(convertToRoman(4)); // Output: "IV"
+// console.log(convertToRoman(9)); // Output: "IX"
+// console.log(convertToRoman(14)); // Output: "XIV"
+// console.log(convertToRoman(3999)); // Output: "MMMCMXCIX"
