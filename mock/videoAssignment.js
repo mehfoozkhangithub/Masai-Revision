@@ -51,7 +51,7 @@ function HappyNumber(N) {
     N = square(N);
   }
   console.log("Yes");
-  console.log("this is object", obj);
+  // console.log("this is object", obj);
 }
 function square(n) {
   let x;
@@ -257,3 +257,87 @@ function convertToRoman(num) {
 // console.log(convertToRoman(9)); // Output: "IX"
 // console.log(convertToRoman(14)); // Output: "XIV"
 // console.log(convertToRoman(3999)); // Output: "MMMCMXCIX"
+
+// ali interview question
+
+//? this is zero to end wala question
+
+// let random_array = [0, 1, 2, 3, 0];
+let random_array = [0, 0, 1, 2, 3];
+let index_count_position = 0;
+for (let i = 0; i < random_array.length; i++) {
+  if (random_array[i] !== 0) {
+    random_array[index_count_position] = random_array[i];
+    index_count_position++;
+  }
+}
+while (index_count_position < random_array.length) {
+  random_array[index_count_position] = 0;
+  index_count_position++;
+}
+console.log(random_array);
+
+//? unique Gift
+
+function uniqueGift(String) {
+  let obj = {};
+  let newArr = [];
+  let answer = "";
+
+  for (let i = 0; i < String.length; i++) {
+    if (obj[String[i]] === undefined) {
+      obj[String[i]] = 1;
+    } else {
+      obj[String[i]]++;
+    }
+
+    newArr.push(String[i]);
+    // console.log("this is newArr console :", newArr);
+    // console.log("this is obj console :", obj);
+
+    while (newArr.length != 0) {
+      if (obj[newArr[0]] === 1) {
+        break;
+      } else {
+        newArr.shift();
+      }
+    }
+
+    if (newArr.length === 0) {
+      answer += "#";
+    } else {
+      answer += newArr[0];
+    }
+    // console.log(newArr);
+    // console.log(obj);
+  }
+  console.log(answer);
+}
+
+uniqueGift("abadbc");
+// uniqueGift("abcabc");
+
+//?  consecutive even
+
+function consecutiveEven(arr_dat) {
+  let flag = false;
+  for (let i = 0; i < arr_dat.length - 2; i++) {
+    if (
+      arr_dat[i] % 2 === 0 &&
+      arr_dat[i + 1] % 2 === 0 &&
+      arr_dat[i + 2] % 2 === 0
+    ) {
+      flag = true;
+      break;
+    }
+  }
+
+  if (flag) {
+    console.log("Yes");
+  } else {
+    console.log("No");
+  }
+}
+
+consecutiveEven([1, 2, 4, 6, 8]);
+// consecutiveEven([1, 2, 3, 4]);

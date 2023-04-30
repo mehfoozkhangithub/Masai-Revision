@@ -324,3 +324,7 @@ In this example, the base case is when n is equal to 0, which returns 1. The rec
 
 Recursion can be a powerful and elegant solution to many programming problems, but it can also be inefficient and use up a lot of memory if not implemented carefully. It's important to consider the potential performance implications of using recursion and to optimize the function as necessary.
 ```
+
+# Coding Interview question preparation
+
+- Q1. What is the Temporal dead zone ?
