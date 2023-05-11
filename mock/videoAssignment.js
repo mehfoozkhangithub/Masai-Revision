@@ -311,11 +311,11 @@ function uniqueGift(String) {
     // console.log(newArr);
     // console.log(obj);
   }
-  console.log(answer);
+  console.log("this is the console of uniqueGift:", answer);
 }
 
 uniqueGift("abadbc");
-// uniqueGift("abcabc");
+uniqueGift("abcabc");
 
 //?  consecutive even
 
@@ -339,5 +339,13 @@ function consecutiveEven(arr_dat) {
   }
 }
 
-consecutiveEven([1, 2, 4, 6, 8]);
-// consecutiveEven([1, 2, 3, 4]);
+//# consecutiveEven([1, 2, 3, 4]);  //ans : No
+consecutiveEven([1, 2, 4, 6, 8]); //. ans : Yes
+
+//! this is alert
+//? this is question
+//. this is note
+//# this is info
+//* this is answer
+// this is normal comment
+//$ this is style comment
