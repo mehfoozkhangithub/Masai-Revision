@@ -128,6 +128,8 @@ let ans = factorial(5);
 
 console.log(ans);
 
+// # end
+
 // # QUESTION  NO 6 FIND MAXIMUM SUM
 
 let array_1 = [3, -4, 1, 2, -1];
@@ -158,3 +160,149 @@ const findMaxSum = (arr) => {
 };
 
 findMaxSum(array_2);
+
+// # QUESTION NO 7 HAPPY NUMBER
+
+/*
+# var num = 123456;
+# var digits = num.toString().split('');
+# var realDigits = digits.map(Number)
+# console.log(realDigits);
+*/
+
+/* 
+
+! test cases
+
+. 11 -> false
+. 7 -> true
+. 1 -> true
+
+
+*/
+
+const happyNumber = (number) => {
+  let flag = false;
+
+  let sum = 0;
+
+  number = Array.from(String(number), Number);
+
+  if (number.length !== 1) {
+    for (let i = 0; i < number.length; i++) {
+      sum += number[i] * number[i];
+      number = sum;
+      if (sum === 1) {
+        flag = true;
+      }
+    }
+  }
+
+  if (flag) {
+    console.log("Yes");
+  } else {
+    console.log("No");
+  }
+};
+happyNumber(11);
+
+let number = 123456789;
+
+// Initializing the result variable
+let result = 0;
+
+while (number > 0) {
+  //# Getting the rightmost digit
+  rightmost = number % 10;
+
+  //. Getting result is prev value from rightmost and
+  result = result * 10 + rightmost;
+
+  //@ Removing the rightmost digit from the number
+  number = Math.floor(number / 10);
+}
+console.log("Reversed number is : " + result);
+
+//# remove duplicate in array
+
+let duplicate_Array = [1, 1, 3, 2, 4, 5]; //@ this is the duplicate array
+
+let new_Array = []; //. this is new array
+
+// let sort=duplicate_Array.sort(); //! this is the sort.Method
+
+duplicate_Array.sort((a, b) => {
+  //* In this we create function  applied sort algorithm
+
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+
+// console.log(duplicate_Array);
+
+let obj_1 = {};
+
+for (let i = 0; i < duplicate_Array.length; i++) {
+  // console.log(duplicate_Array[i])
+
+  if (obj_1[duplicate_Array[i]] === undefined) {
+    obj_1[duplicate_Array[i]] = 1;
+  } else {
+    obj_1[duplicate_Array[i]]++;
+  }
+}
+
+for (let key in obj_1) {
+  let change_into_number = Number(key); //* this condition is use for converting str to num;
+  new_Array.push(change_into_number);
+}
+console.log(new_Array);
+
+// for (const iterator of new_Array) {
+//     console.log( typeof iterator)
+// }
+//# this is loop is for checking my final array have number of string types because that is also the '#cases'
+
+let str = "abadbc"; //#  ans ->   aabbdd
+
+let str_1 = "abcabc"; //# ans ->   aaabc#
+
+let Queue = [];
+
+let obj_cont = {};
+
+let answer = "";
+
+for (let i = 0; i < str_1.length; i++) {
+  if (obj_cont[str_1[i]] === undefined) {
+    obj_cont[str_1[i]] = 1;
+  } else {
+    obj_cont[str_1[i]]++;
+  }
+
+  Queue.push(str_1[i]);
+
+  while (Queue.length) {
+    if (obj_cont[Queue[0]] === 1) {
+      break;
+    } else {
+      Queue.shift();
+    }
+  }
+
+  if (Queue.length === 0) {
+    answer += "#";
+  } else {
+    answer += Queue[0];
+  }
+}
+
+console.log(Queue);
+
+console.log(answer);
