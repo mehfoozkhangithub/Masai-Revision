@@ -206,6 +206,8 @@ const happyNumber = (number) => {
 };
 happyNumber(11);
 
+//# Reverse the number
+
 let number = 123456789;
 
 // Initializing the result variable
@@ -306,3 +308,276 @@ for (let i = 0; i < str_1.length; i++) {
 console.log(Queue);
 
 console.log(answer);
+
+//# this is the leet code quest happy number
+
+function isHappy(n) {
+  const squares = {
+    0: 0,
+    1: 1,
+    2: 4,
+    3: 9,
+    4: 16,
+    5: 25,
+    6: 36,
+    7: 49,
+    8: 64,
+    9: 81,
+  };
+  const memo = new Map();
+
+  let temp = n;
+  while (!memo.get(temp)) {
+    temp = temp
+      .toString()
+      .split("")
+      .reduce((acc, i) => {
+        console.log(acc, i);
+        acc += squares[i];
+        console.log(acc, i);
+        return acc;
+      }, 0);
+    if (!memo.has(temp)) memo.set(temp, false);
+    else return false;
+    if (temp === 1) return true;
+  }
+}
+
+let ans1 = isHappy(1);
+
+console.log(ans1);
+
+// # maxSubarrayProduct
+
+let Arr_0 = [6, -3, -10, 0, 2];
+// Output:   180  // The subarray is {6, -3, -10}
+
+let Arr_00 = [-1, -3, -10, 0, 60];
+//Output:   60  // The subarray is {60}
+
+function maxSubarrayProduct(arr, n) {
+  // Initializing result
+  let result = arr[0];
+
+  for (let i = 0; i < n; i++) {
+    let mul = arr[i];
+    // traversing in current subarray
+    for (let j = i + 1; j < n; j++) {
+      // updating result every time
+      // to keep an eye over the maximum product
+      result = Math.max(result, mul);
+      mul *= arr[j];
+    }
+    // updating the result for (n-1)th index.
+    result = Math.max(result, mul);
+  }
+  return result;
+}
+
+maxSubarrayProduct(Arr_0, Arr_0.length);
+
+//#  Binary matrix question
+
+let matrix = [
+  [1, 0, 1],
+  [0, 0, 0],
+  [1, 0, 1],
+];
+
+function binaryMatrix(N, M, matrix) {
+  for (var i = 0; i < N; i++) {
+    let ans = [];
+    for (var j = 0; j < M; j++) {
+      if (matrix[i][j] === 1) {
+        ans.push("0");
+      } else if (matrix[i][j] === 0) {
+        ans.push("1");
+      }
+    }
+    console.log(ans.join(" "));
+  }
+}
+
+// # this is the geeks for geeks [this is out of syllabus question for self understanding];
+
+let mat = [
+  [1, 0, 1, 1],
+  [0, 1, 0, 1],
+  [1, 1, 1, 0],
+];
+
+let mat_2 = [
+  [1, 0, 1, 1],
+  [1, 2, 0, 1],
+  [0, 0, 1, 1],
+];
+
+// function to check if a matrix is binary matrix
+// or not
+function isBinaryMatrix(mat) {
+  let M = mat.length;
+  let N = mat[0].length;
+  for (let i = 0; i < M; i++) {
+    for (let j = 0; j < N; j++) {
+      // Returns false if element is other than 0 or 1.
+      if (!(mat[i][j] == 0 || mat[i][j] == 1)) return false;
+    }
+  }
+
+  // Returns true if all the elements
+  // are either 0 or 1.
+  return true;
+}
+
+let ans11 = isBinaryMatrix(mat);
+
+console.log(ans11);
+
+//# Reverse the string with the stack
+
+//Reverse the string using queue
+
+let str_10 = "A transformation in Education";
+
+let stack = [];
+
+let reversedStr = "";
+
+for (let i = 0; i < str_10.length; i++) {
+  stack.push(str_10[i]);
+}
+
+//Creates a reversed string by popping the stack.
+
+while (stack.length != 0) {
+  reversedStr += stack.pop();
+}
+//returns the reversed string.
+console.log(reversedStr);
+
+//# bbl sort
+
+function bblSort() {
+  let ar1 = [1, 2, 3];
+  let ar2 = [6, 5, 4];
+  let arr = ar1.concat(ar2);
+
+  for (var i = 0; i < arr.length; i++) {
+    // Last i elements are already in place
+    for (var j = 0; j < arr.length - i - 1; j++) {
+      // Checking if the item at present iteration
+      // is greater than the next iteration
+      if (arr[j] > arr[j + 1]) {
+        // If the condition is true then swap them
+        var temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  // Print the sorted array
+  console.log(arr);
+}
+
+bblSort();
+
+function steps(num) {
+  if (num === 0) {
+    return 1;
+  }
+  if (num < 0) {
+    return 0;
+  }
+  return steps(num - 1) + steps(num - 2) + steps(num - 3);
+}
+
+console.log("this is recursion problem :)->", steps(4));
+
+function reverseTheString(str) {
+  let stack = [];
+  let ans = "";
+
+  for (let i = 0; i < str.length; i++) {
+    stack.push(str[i]);
+  }
+
+  while (stack.length != 0) {
+    ans += stack.pop();
+  }
+
+  console.log("this is stack reverse problem:-", stack);
+  console.log("this is stack reverse problem console.log:-", ans);
+}
+reverseTheString("noitacudE ni noitamrofsnart A");
+
+function factorial1(num) {
+  if (num === 0) {
+    return 1;
+  }
+  return num * factorial1(num - 1);
+}
+
+console.log("this is factorial1 problem solution:-", factorial1(5));
+
+// #  this is more optimized way to solve the program of balance the bracket
+
+function myFunction(str) {
+  const openingBrackets = ["[", "(", "{"];
+  const closingBrackets = ["]", ")", "}"];
+  const stack = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (openingBrackets.includes(str[i])) {
+      stack.push(str[i]);
+    } else if (closingBrackets.includes(str[i])) {
+      const expectedBracket = openingBrackets[closingBrackets.indexOf(str[i])];
+      if (stack.length === 0 || stack.pop() !== expectedBracket) {
+        console.log("unbalanced");
+        return;
+      }
+    }
+  }
+  if (stack.length === 0) {
+    console.log("balanced");
+  } else {
+    console.log("unbalanced");
+  }
+}
+
+// Test cases
+myFunction("{(})]["); // unbalanced
+myFunction("[{()}]"); // balanced
+// myFunction("{(})]["); // unbalanced
+// myFunction("[{()}]"); // balanced
+
+// # this is roman to integer
+
+let str_12 = "MCMXCIV";
+// let str_12 = "III";
+function romanToInteger(s) {
+  const table = {
+    I: 1,
+    V: 5,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  let ans = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    // console.log("this is roman to integer:->", s[i]);
+    let currentVal = table[s[i]];
+    let nextVal = table[s[i + 1]];
+    // console.log(currentVal, nextVal);
+    if (currentVal < nextVal) {
+      ans += nextVal - currentVal;
+      i++;
+    } else {
+      ans += currentVal;
+    }
+  }
+  console.log(ans);
+}
+romanToInteger(str_12);
