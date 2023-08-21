@@ -30,3 +30,11 @@ for (let x in object) {
   console.log("*************************************************************");
   console.log(object[x]);
 }
+
+//# here we are going to the doing the value of the problem.
+
+let Arr = [1, 2, 3];
+
+for (let i = 0; i < Arr.length; i++) {
+  console.log(Arr[i]);
+}
